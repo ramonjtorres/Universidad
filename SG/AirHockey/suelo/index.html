@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Suelo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <script type="text/javascript" src="../libs/three.min.js"></script>
+    <script type="text/javascript" src="../libs/physi.js"></script>
+    <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../libs/stats.js"></script>
+    <script type="text/javascript" src="../libs/dat.gui.js"></script>
+    <script type="text/javascript" src="../libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="../libs/OBJLoader.js"></script>
+    <script type="text/javascript" src="Ground.js"></script>
+    <script type="text/javascript" src="JugadorAndPuck.js"></script>
+    <script type="text/javascript" src="TheScene.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img id="marcador" src="imgs/marcador.jpg">
+    
+    <audio id="multyplayer">
+        <source src="Sounds/League%20of%20Legends%20DJ%20SONA%20Login%20Theme.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="inicio" autoplay>
+        <source src="Sounds/Bit%20Rush%20%20Login%20Screen%20-%20League%20of%20Legends.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="oneplayer">
+        <source src="Sounds/Boss.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="palas">
+        <source src="Sounds/rebotedisco2.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="gol">
+        <source src="Sounds/Goal.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="muerte">
+        <source src="Sounds/muertemp3.mp3" type="audio/mpeg" >
+    </audio>
+    
+    <audio id="limittime">
+        <source src="Sounds/casifinal.mp3" type="audio/mpeg" >
+    </audio>
+
+    <!-- Div which will show statistical information -->
+    <div id="Stats-output">
+    </div>
+
+    <!-- Div which will show several messages -->
+    <div style="position:absolute; left:100px; top:10px" id="Messages">
+    </div>
+
+    <!-- Div which will hold the Output -->
+    <div id="WebGL-output">
+        
+        <div id="puntos1"></div>
+        <div id="puntos2"></div>
+        <div id="tiempo"></div>
+        
+        <div id="blocker">
+            <div id="instructions">
+                <span style="font-size:40px">Instructions: </span>
+                <br /> Player 1: A, D = Move
+                <br /> Player 2: ←, → = Move
+                <br/> MOUSE and CTRL= Look around
+                <br/><br/>PRESS SPACE TO GO TO MENU →
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="instructions">
+                <span style="font-size:40px">GAME MODE: </span><br/>
+                <button type="button" onclick="mode(1)">ONE PLAYER</button><br/>
+                <button type="button" onclick="mode(2)">TWO PLAYERS</button>
+            </div>
+        </div>
+        
+        <div id="player">
+            <div id="instructions">
+                <p style="font-size:40px">ONE PLAYER</p><br/>
+                <span style="font-size:20px">SELECT A HERO: </span><br/>
+                <table>
+                    <tr>
+                        <button id="1" type="button" onclick="elegir(1,1)"><img id="imagen" src="imgs/blackangel.jpg"></button>
+                        <button id="2" type="button" onclick="elegir(2,1)"><img id="imagen" src="imgs/Green-Arrow-Archer-Girl.jpg"></button>
+                        <button id="3" type="button" onclick="elegir(3,1)"><img id="imagen" src="imgs/guerrero.jpg"></button>
+                        <button id="4" type="button" onclick="elegir(4,1)"><img id="imagen" src="imgs/valkyrie.jpg"></button>
+                    </tr>
+                </table><br/><br/>
+                <br/><br/><button id="boton" type="button" onclick="empezar(1)">PRESS TO START →</button>
+            </div>
+        </div>
+        
+        <div id="players">
+            <div id="instructions">
+                <p style="font-size:40px">TWO PLAYERS</p><br/>
+                <span style="font-size:20px">PLAYER 1: </span><br/>
+                <table>SELECT A HERO:<br/>
+                    <tr>
+                        <button id="5" type="button" onclick="elegir(1,2)"><img id="imagen" src="imgs/blackangel.jpg"></button>
+                        <button id="6" type="button" onclick="elegir(2,2)"><img id="imagen" src="imgs/Green-Arrow-Archer-Girl.jpg"></button>
+                        <button id="7" type="button" onclick="elegir(3,2)"><img id="imagen" src="imgs/guerrero.jpg"></button>
+                        <button id="8" type="button" onclick="elegir(4,2)"><img id="imagen" src="imgs/valkyrie.jpg"></button>
+                    </tr>
+                </table><br/>
+                <span style="font-size:20px">PLAYER 2: </span><br/>
+                <table>SELECT A HERO:<br/>
+                    <tr>
+                        <button id="9" type="button" onclick="elegir(5,2)"><img id="imagen" src="imgs/blackangel.jpg"></button>
+                        <button id="10" type="button" onclick="elegir(6,2)"><img id="imagen" src="imgs/Green-Arrow-Archer-Girl.jpg"></button>
+                        <button id="11" type="button" onclick="elegir(7,2)"><img id="imagen" src="imgs/guerrero.jpg"></button>
+                        <button id="12" type="button" onclick="elegir(8,2)"><img id="imagen" src="imgs/valkyrie.jpg"></button>
+                    </tr>
+                </table><br/><br/>
+                <br/><br/><button id="boton" type="button" onclick="empezar(2)">PRESS TO START →</button>
+            </div>
+        </div>
+
+        <div id="blocker2">
+            <div id="instructions">
+                <span style="font-size:40px" id="fin"></span>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

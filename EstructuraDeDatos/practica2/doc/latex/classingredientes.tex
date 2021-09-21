@@ -1,0 +1,643 @@
+\hypertarget{classingredientes}{}\section{ingredientes Class Reference}
+\label{classingredientes}\index{ingredientes@{ingredientes}}
+
+
+{\ttfamily \#include $<$ingredientes.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classingredientes_adb3e000aa798184c7253c401f165c1a5}{ingredientes} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de la clase. \end{DoxyCompactList}\item 
+void \hyperlink{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}{Insertar} (\hyperlink{classingrediente}{ingrediente} \&i)
+\begin{DoxyCompactList}\small\item\em Insertar un ingrediente en ingredientes. \end{DoxyCompactList}\item 
+void \hyperlink{classingredientes_a35403b690f689a21f4d179e25e25ff48}{borrar} (string s)
+\begin{DoxyCompactList}\small\item\em Borra un ingrediente en ingredientes. \end{DoxyCompactList}\item 
+\hyperlink{classingrediente}{ingrediente} \hyperlink{classingredientes_ad77fd43aa6ab52bb7f0bf547cb4bc777}{obt\+Ing\+Nom} (int i)
+\begin{DoxyCompactList}\small\item\em Obtiene el ingrediente en la posición i según el orden del nombre. \end{DoxyCompactList}\item 
+\hyperlink{classingrediente}{ingrediente} \hyperlink{classingredientes_a920e0fbbf533a8ba934cfc485b2e44c0}{get} (string \&n)
+\begin{DoxyCompactList}\small\item\em Obtiene la información de un ingrediente dando su nombre. \end{DoxyCompactList}\item 
+void \hyperlink{classingredientes_ada1c7580434d7802ee1e87196d15524b}{Imprimir\+Por\+Tipo} ()
+\begin{DoxyCompactList}\small\item\em Obtiene en i todos los ingredientes ordenados por tipo. \end{DoxyCompactList}\item 
+\hyperlink{classingredientes}{ingredientes} \hyperlink{classingredientes_a160ecb07facb16cbe7369ea797c67549}{get\+Ingrediente\+Tipo} (string tipo)
+\begin{DoxyCompactList}\small\item\em Obtiene todos los ingredientes de un tipo. \end{DoxyCompactList}\item 
+\hyperlink{classVD}{VD}$<$ string $>$ \hyperlink{classingredientes_a0404324a62539f06a97498169b879005}{get\+Tipos} ()
+\begin{DoxyCompactList}\small\item\em Obtiene un \hyperlink{classVD}{VD} de string con todos los tipos distintos. \end{DoxyCompactList}\item 
+void \hyperlink{classingredientes_a936869362643db1949a326167c668270}{mod\+Ing} (\hyperlink{classingrediente}{ingrediente} \&i, int pos)
+\begin{DoxyCompactList}\small\item\em Elimina el ingrediente en la posicion pos e inserta el nuevo ingrediente i. \end{DoxyCompactList}\item 
+const \hyperlink{classingrediente}{ingrediente} \& \hyperlink{classingredientes_afc77feaa95ef6885c9f4e0bbeef746a4}{operator\mbox{[}$\,$\mbox{]}} (int i) const
+\begin{DoxyCompactList}\small\item\em Accede al elemento en la posicion i de datos y lo devuelve. \end{DoxyCompactList}\item 
+\hyperlink{classingrediente}{ingrediente} \& \hyperlink{classingredientes_aec207846725fd56da917fc87538e2609}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\begin{DoxyCompactList}\small\item\em Accede al elemento en la posicion i de datos y lo devuelve. \end{DoxyCompactList}\item 
+void \hyperlink{classingredientes_ac7cc4f90c19935063ba0401f9aab1394}{clear} ()
+\begin{DoxyCompactList}\small\item\em Delete a datos y indice. \end{DoxyCompactList}\item 
+int \hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size} ()
+\begin{DoxyCompactList}\small\item\em Devuelve el tamaño de datos. \end{DoxyCompactList}\item 
+\hyperlink{structmypair}{mypair} \hyperlink{classingredientes_af54ca9dbd807c345f6f953a2c63172de}{B\+Binaria\+Ingrediente} (int inicio, int fin, \hyperlink{classingrediente}{ingrediente} x)
+\begin{DoxyCompactList}\small\item\em Búsqueda binaria para ayudar a la función insertar ingrediente. \end{DoxyCompactList}\item 
+\hyperlink{structmypair}{mypair} \hyperlink{classingredientes_abfbdb4c010ef4a72c750a077645eb4f0}{B\+Binaria\+Indice} (int inicio, int fin, \hyperlink{classingrediente}{ingrediente} x)
+\begin{DoxyCompactList}\small\item\em Búsqueda binaria para ayudar a la función insertar indice. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{classingredientes_a1ab0c9c6bff343a083f9cf9296b31438}{operator$>$$>$} (istream \&is, \hyperlink{classingredientes}{ingredientes} \&i)
+\begin{DoxyCompactList}\small\item\em Entrada de ingredientes desde istream. \end{DoxyCompactList}\item 
+ostream \& \hyperlink{classingredientes_a9516ae2a429fa3af5b8d59b98a285c86}{operator$<$$<$} (ostream \&os, \hyperlink{classingredientes}{ingredientes} \&i)
+\begin{DoxyCompactList}\small\item\em Salida de ingredientes desde istream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 31 of file ingredientes.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classingredientes_adb3e000aa798184c7253c401f165c1a5}\label{classingredientes_adb3e000aa798184c7253c401f165c1a5}} 
+\index{ingredientes@{ingredientes}!ingredientes@{ingredientes}}
+\index{ingredientes@{ingredientes}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{ingredientes()}{ingredientes()}}
+{\footnotesize\ttfamily ingredientes\+::ingredientes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto de la clase. 
+
+\begin{DoxyReturn}{Returns}
+Crea el ingredientes vacío 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+6 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classingredientes_abfbdb4c010ef4a72c750a077645eb4f0}\label{classingredientes_abfbdb4c010ef4a72c750a077645eb4f0}} 
+\index{ingredientes@{ingredientes}!B\+Binaria\+Indice@{B\+Binaria\+Indice}}
+\index{B\+Binaria\+Indice@{B\+Binaria\+Indice}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{B\+Binaria\+Indice()}{BBinariaIndice()}}
+{\footnotesize\ttfamily \hyperlink{structmypair}{mypair} ingredientes\+::\+B\+Binaria\+Indice (\begin{DoxyParamCaption}\item[{int}]{inicio,  }\item[{int}]{fin,  }\item[{\hyperlink{classingrediente}{ingrediente}}]{x }\end{DoxyParamCaption})}
+
+
+
+Búsqueda binaria para ayudar a la función insertar indice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inicio} & posición de inicio \\
+\hline
+{\em fin} & posición final \\
+\hline
+{\em x} & ingrediente a insertar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+34                                                                      \{
+35 
+36     \hyperlink{structmypair}{mypair} p;
+37     p.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos} = -1;
+38     p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta} = \textcolor{keyword}{false};
+39 
+40     \textcolor{keywordflow}{while}((inicio < fin) && (!p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta}))\{
+41 
+42         \textcolor{keywordtype}{int} mitad = (fin + inicio) / 2;
+43         \textcolor{keywordflow}{if}(datos[indice[mitad]] == x)\{
+44             p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta} = \textcolor{keyword}{true};
+45         \}
+46         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(datos[indice[mitad]].getTipo() < x.\hyperlink{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}{getTipo}())\{
+47             inicio = mitad + 1;
+48         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}((datos[indice[mitad]].getTipo() == x.\hyperlink{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}{getTipo}()) && (datos[indice[mitad]].getNombre(
+      ) < x.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}()))\{
+49       inicio = mitad + 1;
+50     \}\textcolor{keywordflow}{else}
+51             fin = mitad;
+52     \}
+53     \textcolor{keywordflow}{if}(!p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta})
+54         p.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos} = inicio;
+55 
+56     \textcolor{keywordflow}{return} p;
+57 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_af54ca9dbd807c345f6f953a2c63172de}\label{classingredientes_af54ca9dbd807c345f6f953a2c63172de}} 
+\index{ingredientes@{ingredientes}!B\+Binaria\+Ingrediente@{B\+Binaria\+Ingrediente}}
+\index{B\+Binaria\+Ingrediente@{B\+Binaria\+Ingrediente}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{B\+Binaria\+Ingrediente()}{BBinariaIngrediente()}}
+{\footnotesize\ttfamily \hyperlink{structmypair}{mypair} ingredientes\+::\+B\+Binaria\+Ingrediente (\begin{DoxyParamCaption}\item[{int}]{inicio,  }\item[{int}]{fin,  }\item[{\hyperlink{classingrediente}{ingrediente}}]{x }\end{DoxyParamCaption})}
+
+
+
+Búsqueda binaria para ayudar a la función insertar ingrediente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inicio} & posición de inicio \\
+\hline
+{\em fin} & posición final \\
+\hline
+{\em x} & ingrediente a insertar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+9                                                                         \{
+10 
+11     \hyperlink{structmypair}{mypair} p;
+12     p.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos} = -1;
+13     p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta} = \textcolor{keyword}{false};
+14 
+15     \textcolor{keywordflow}{while}((inicio < fin) && (!p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta}))\{
+16         \textcolor{keywordtype}{int} mitad = (fin + inicio) / 2;
+17 
+18         \textcolor{keywordflow}{if}(datos[mitad] == x)\{
+19             p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta} = \textcolor{keyword}{true};
+20 
+21         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(datos[mitad] < x)\{
+22             inicio = mitad +1;
+23 
+24         \}\textcolor{keywordflow}{else}
+25             fin = mitad;
+26     \}
+27     \textcolor{keywordflow}{if}(!p.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta})
+28         p.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos} = inicio;
+29 
+30     \textcolor{keywordflow}{return} p;
+31 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a35403b690f689a21f4d179e25e25ff48}\label{classingredientes_a35403b690f689a21f4d179e25e25ff48}} 
+\index{ingredientes@{ingredientes}!borrar@{borrar}}
+\index{borrar@{borrar}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{borrar()}{borrar()}}
+{\footnotesize\ttfamily void ingredientes\+::borrar (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Borra un ingrediente en ingredientes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & nombre del ingrediente a borrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+se debe haber borrado el ingrediente cuyo nombre fuera s 
+\end{DoxyPostcond}
+
+
+Definition at line 79 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+79                                  \{
+80     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0 ; i < datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+81         \textcolor{keywordflow}{if}(datos[i].getNombre() == s)\{
+82             datos.\hyperlink{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}{borrar}(i);
+83         \}
+84         \textcolor{keywordflow}{if}(datos[indice[i]].getNombre() == s)\{
+85             indice.\hyperlink{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}{borrar}(i);
+86         \}
+87     \}
+88 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_ac7cc4f90c19935063ba0401f9aab1394}\label{classingredientes_ac7cc4f90c19935063ba0401f9aab1394}} 
+\index{ingredientes@{ingredientes}!clear@{clear}}
+\index{clear@{clear}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void ingredientes\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Delete a datos y indice. 
+
+\mbox{\Hypertarget{classingredientes_a920e0fbbf533a8ba934cfc485b2e44c0}\label{classingredientes_a920e0fbbf533a8ba934cfc485b2e44c0}} 
+\index{ingredientes@{ingredientes}!get@{get}}
+\index{get@{get}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{classingrediente}{ingrediente} ingredientes\+::get (\begin{DoxyParamCaption}\item[{string \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Obtiene la información de un ingrediente dando su nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nombre del ingrediente del que se quiere obtener la información \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el ingrediente con toda la información 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+debe darse un nombre correcto 
+\end{DoxyPostcond}
+
+
+Definition at line 102 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+102                                       \{
+103     \textcolor{keywordtype}{bool} encontrado = \textcolor{keyword}{false};
+104     \textcolor{keywordtype}{int} pos = 0;
+105     \textcolor{keywordtype}{string} inf = \textcolor{stringliteral}{""};
+106     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() || encontrado; i++)\{
+107         \textcolor{keywordflow}{if}( datos[i].getNombre() == n)
+108             pos = i;
+109     \}
+110     \textcolor{keywordflow}{return} datos[pos];
+111 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a160ecb07facb16cbe7369ea797c67549}\label{classingredientes_a160ecb07facb16cbe7369ea797c67549}} 
+\index{ingredientes@{ingredientes}!get\+Ingrediente\+Tipo@{get\+Ingrediente\+Tipo}}
+\index{get\+Ingrediente\+Tipo@{get\+Ingrediente\+Tipo}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{get\+Ingrediente\+Tipo()}{getIngredienteTipo()}}
+{\footnotesize\ttfamily \hyperlink{classingredientes}{ingredientes} ingredientes\+::get\+Ingrediente\+Tipo (\begin{DoxyParamCaption}\item[{string}]{tipo }\end{DoxyParamCaption})}
+
+
+
+Obtiene todos los ingredientes de un tipo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Ingredientes en los que se va a almacenar los que sean del mismo tipo \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em los} & ingredientes que va guardando \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPostcond}{Postcondition}
+debe darse un tipo correcto 
+\end{DoxyPostcond}
+
+
+Definition at line 121 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+121                                                          \{
+122 
+123     \hyperlink{classingredientes}{ingredientes} i;
+124     \textcolor{keywordtype}{string} tipo2;
+125     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j< datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); j++)\{
+126         tipo2=datos[j].getTipo();
+127         \textcolor{keywordflow}{if}(tipo == tipo2)\{
+128             i.\hyperlink{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}{Insertar}(datos[j]);
+129         \}
+130     \}
+131     \textcolor{keywordflow}{return} i;
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a0404324a62539f06a97498169b879005}\label{classingredientes_a0404324a62539f06a97498169b879005}} 
+\index{ingredientes@{ingredientes}!get\+Tipos@{get\+Tipos}}
+\index{get\+Tipos@{get\+Tipos}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{get\+Tipos()}{getTipos()}}
+{\footnotesize\ttfamily \hyperlink{classVD}{VD}$<$ string $>$ ingredientes\+::get\+Tipos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene un \hyperlink{classVD}{VD} de string con todos los tipos distintos. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em los} & tipos de ingredientes \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 150 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+150                                  \{
+151 
+152      \hyperlink{classVD}{VD<string>}tipos;
+153      \textcolor{keywordtype}{int} cont = 0;
+154 
+155      \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+156 
+157         \textcolor{keywordflow}{if}(!\hyperlink{ingredientes_8cpp_ae557f016f908fddaeda9296f7eccbf5d}{Esta}(datos[indice[i]].getTipo(),tipos))\{
+158 
+159             tipos.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(datos[indice[i]].getTipo(), cont);
+160             cont++;
+161         \}
+162     \}
+163 
+164     \textcolor{keywordflow}{return} tipos;
+165 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_ada1c7580434d7802ee1e87196d15524b}\label{classingredientes_ada1c7580434d7802ee1e87196d15524b}} 
+\index{ingredientes@{ingredientes}!Imprimir\+Por\+Tipo@{Imprimir\+Por\+Tipo}}
+\index{Imprimir\+Por\+Tipo@{Imprimir\+Por\+Tipo}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{Imprimir\+Por\+Tipo()}{ImprimirPorTipo()}}
+{\footnotesize\ttfamily void ingredientes\+::\+Imprimir\+Por\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene en i todos los ingredientes ordenados por tipo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & objeto ingredientes donde se almacenarán los ingredientes ordenados por tipo \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em los} & ingredientes que va guardando en i \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPostcond}{Postcondition}
+debe darse un nombre correcto 
+\end{DoxyPostcond}
+
+
+Definition at line 114 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+114                                   \{
+115     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j< datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); j++)\{
+116         cout<<datos[indice[j]]<<endl;
+117     \}
+118 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}\label{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}} 
+\index{ingredientes@{ingredientes}!Insertar@{Insertar}}
+\index{Insertar@{Insertar}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{Insertar()}{Insertar()}}
+{\footnotesize\ttfamily void ingredientes\+::\+Insertar (\begin{DoxyParamCaption}\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Insertar un ingrediente en ingredientes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & ingrediente a insertar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+se debe haber insertado el nuevo ingrediente 
+\end{DoxyPostcond}
+
+
+Definition at line 59 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+59                                          \{
+60     \hyperlink{structmypair}{mypair} pd, pi;
+61 
+62     pd = \hyperlink{classingredientes_af54ca9dbd807c345f6f953a2c63172de}{BBinariaIngrediente}(0, datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(), i);
+63     pi = \hyperlink{classingredientes_abfbdb4c010ef4a72c750a077645eb4f0}{BBinariaIndice}(0, indice.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(), i);
+64 
+65     \textcolor{keywordflow}{if}(!pi.esta)\{
+66                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i< indice.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}();i++)\{
+67                     \textcolor{keywordflow}{if} (indice[i]>=pd.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos})
+68                         indice[i]++;
+69             \}
+70     \}
+71     \textcolor{keywordflow}{if}(!pd.\hyperlink{structmypair_a67eadf826beeb0527c5156298fd9f5c3}{esta})\{\textcolor{comment}{//en caso de que no esté}
+72 
+73         datos.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(i, pd.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos}); \textcolor{comment}{//Insertamos el nuevo ingrediente en datos}
+74         indice.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(pd.\hyperlink{structmypair_a3cfe391d3fe21767719a321dfac81fad}{pos}, pi.pos); \textcolor{comment}{//Insertamos el nuevo indice}
+75     \}
+76 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a936869362643db1949a326167c668270}\label{classingredientes_a936869362643db1949a326167c668270}} 
+\index{ingredientes@{ingredientes}!mod\+Ing@{mod\+Ing}}
+\index{mod\+Ing@{mod\+Ing}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{mod\+Ing()}{modIng()}}
+{\footnotesize\ttfamily void ingredientes\+::mod\+Ing (\begin{DoxyParamCaption}\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Elimina el ingrediente en la posicion pos e inserta el nuevo ingrediente i. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & posicion del ingrediente a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+La posición dada en pos debe ser correcta 
+\end{DoxyPrecond}
+
+
+Definition at line 168 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+168                                                 \{
+169     \hyperlink{classingredientes_a35403b690f689a21f4d179e25e25ff48}{borrar}(datos[pos].getNombre());
+170     \hyperlink{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}{Insertar}(i);
+171 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_ad77fd43aa6ab52bb7f0bf547cb4bc777}\label{classingredientes_ad77fd43aa6ab52bb7f0bf547cb4bc777}} 
+\index{ingredientes@{ingredientes}!obt\+Ing\+Nom@{obt\+Ing\+Nom}}
+\index{obt\+Ing\+Nom@{obt\+Ing\+Nom}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{obt\+Ing\+Nom()}{obtIngNom()}}
+{\footnotesize\ttfamily \hyperlink{classingrediente}{ingrediente} ingredientes\+::obt\+Ing\+Nom (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Obtiene el ingrediente en la posición i según el orden del nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posicion del ingrediente que queremos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el ingrediente en la posición i 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondition}
+debe darse una posicion correcta 
+\end{DoxyPostcond}
+
+
+Definition at line 96 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+96                                         \{
+97     \hyperlink{classingrediente}{ingrediente} ing = datos[i];
+98     \textcolor{keywordflow}{return} ing;
+99 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_afc77feaa95ef6885c9f4e0bbeef746a4}\label{classingredientes_afc77feaa95ef6885c9f4e0bbeef746a4}} 
+\index{ingredientes@{ingredientes}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{classingrediente}{ingrediente} \& ingredientes\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Accede al elemento en la posicion i de datos y lo devuelve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posicion del elemento en datos a obtener \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el ingrediente en esa posición 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+La posición dada en i debe ser correcta 
+\end{DoxyPrecond}
+
+
+Definition at line 174 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+174                                                        \{
+175     \textcolor{keywordflow}{return} datos[i];
+176 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_aec207846725fd56da917fc87538e2609}\label{classingredientes_aec207846725fd56da917fc87538e2609}} 
+\index{ingredientes@{ingredientes}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classingrediente}{ingrediente} \& ingredientes\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Accede al elemento en la posicion i de datos y lo devuelve. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posicion del elemento en datos a obtener \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el ingrediente en esa posición 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+La posición dada en i debe ser correcta 
+\end{DoxyPrecond}
+
+
+Definition at line 179 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+179                                             \{
+180     \textcolor{keywordflow}{return} datos[i];
+181 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a642511344976e22479ae78e4ee2917f9}\label{classingredientes_a642511344976e22479ae78e4ee2917f9}} 
+\index{ingredientes@{ingredientes}!size@{size}}
+\index{size@{size}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int ingredientes\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Devuelve el tamaño de datos. 
+
+
+
+Definition at line 91 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+91                       \{
+92     \textcolor{keywordflow}{return} datos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}();
+93 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classingredientes_a9516ae2a429fa3af5b8d59b98a285c86}\label{classingredientes_a9516ae2a429fa3af5b8d59b98a285c86}} 
+\index{ingredientes@{ingredientes}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\hyperlink{classingredientes}{ingredientes} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Salida de ingredientes desde istream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & stream de salida \\
+\hline
+{\em i} & ingredientes que tienen el valor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 195 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+195                                                   \{
+196     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j< i.\hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size}(); j++)
+197         os <<i[j] <<endl;
+198     \textcolor{keywordflow}{return} os;
+199 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingredientes_a1ab0c9c6bff343a083f9cf9296b31438}\label{classingredientes_a1ab0c9c6bff343a083f9cf9296b31438}} 
+\index{ingredientes@{ingredientes}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ingredientes@{ingredientes}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\hyperlink{classingredientes}{ingredientes} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Entrada de ingredientes desde istream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & stream de entrada \\
+\hline
+{\em i} & ingredientes que reciben el valor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Los} & ingredientes leidos en i \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondition}
+La entrada tiene un ingrediente en cada linea 
+\end{DoxyPrecond}
+
+
+Definition at line 184 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+184                                                    \{
+185     \textcolor{keywordtype}{string} linea;
+186     getline(is,linea);
+187     \hyperlink{classingrediente}{ingrediente} ing;
+188     \textcolor{keywordflow}{while}(is >> ing)\{
+189         i.\hyperlink{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}{Insertar}(ing);
+190     \}
+191     \textcolor{keywordflow}{return} is;
+192 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ingredientes_8h}{ingredientes.\+h}\item 
+src/\hyperlink{ingredientes_8cpp}{ingredientes.\+cpp}\end{DoxyCompactItemize}

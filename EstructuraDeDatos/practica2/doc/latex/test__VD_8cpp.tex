@@ -1,0 +1,71 @@
+\hypertarget{test__VD_8cpp}{}\section{src/test\+\_\+\+VD.cpp File Reference}
+\label{test__VD_8cpp}\index{src/test\+\_\+\+V\+D.\+cpp@{src/test\+\_\+\+V\+D.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}V\+D.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{test__VD_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__VD_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__VD_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test\+\_\+\+V\+D.\+cpp@{test\+\_\+\+V\+D.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+\+V\+D.\+cpp@{test\+\_\+\+V\+D.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file test\+\_\+\+V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+6            \{
+7 
+8     \hyperlink{classVD}{VD <int>} vector\_dinamico = \hyperlink{classVD}{VD<int>}(10);
+9     \hyperlink{classVD}{VD <int>} vector\_dinamico2 = \hyperlink{classVD}{VD<int>}(15);
+10 
+11     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<10; i++)\{
+12         
+13         vector\_dinamico.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(i*2, i);
+14     \}
+15 
+16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<15; i++)\{
+17         
+18         vector\_dinamico2.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(i*3, i);
+19     \}
+20 
+21     cout << \textcolor{stringliteral}{"Tamaño v1: "} << vector\_dinamico.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+22     cout << \textcolor{stringliteral}{"Tamaño v2: "} << vector\_dinamico2.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+23 
+24     \hyperlink{classVD}{VD <int>} vector\_dinamico3 = \hyperlink{classVD}{VD<int>}(vector\_dinamico);
+25     \hyperlink{classVD}{VD <int>} vector\_dinamico4;
+26 
+27     vector\_dinamico4 = vector\_dinamico2;
+28     
+29     cout << \textcolor{stringliteral}{"Tamaño v3: "} << vector\_dinamico3.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+30     cout << \textcolor{stringliteral}{"Tamaño v4: "} << vector\_dinamico4.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+31 
+32     vector\_dinamico3.\hyperlink{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}{borrar}(5);
+33     vector\_dinamico4.\hyperlink{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}{borrar}(7);
+34 
+35     cout << \textcolor{stringliteral}{"Tamaño v3: "} << vector\_dinamico3.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+36     cout << \textcolor{stringliteral}{"Tamaño v4: "} << vector\_dinamico4.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}() << endl;
+37 
+38     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<vector\_dinamico3.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+39     
+40         cout << vector\_dinamico3[i] << \textcolor{stringliteral}{" "};
+41     \}
+42 
+43     cout << \textcolor{stringliteral}{"\(\backslash\)n"};
+44 
+45     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<vector\_dinamico4.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+46     
+47         cout << vector\_dinamico4[i] << \textcolor{stringliteral}{" "};
+48     \}
+49 
+50     \textcolor{keywordflow}{return}(0);
+51 \}
+\end{DoxyCode}

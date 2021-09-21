@@ -1,0 +1,317 @@
+\hypertarget{tipos__ingredientes_8cpp}{}\section{src/tipos\+\_\+ingredientes.cpp File Reference}
+\label{tipos__ingredientes_8cpp}\index{src/tipos\+\_\+ingredientes.\+cpp@{src/tipos\+\_\+ingredientes.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ingrediente.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ingredientes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media} (\hyperlink{classVD}{VD}$<$ double $>$ valores)
+\item 
+double \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza} (\hyperlink{classVD}{VD}$<$ double $>$ valores)
+\item 
+double \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion} (\hyperlink{classVD}{VD}$<$ double $>$ valores, double var)
+\item 
+\hyperlink{classingrediente}{ingrediente} \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo} (\hyperlink{classVD}{VD}$<$ double $>$ valores, \hyperlink{classingredientes}{ingredientes} is)
+\item 
+\hyperlink{classingrediente}{ingrediente} \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo} (\hyperlink{classVD}{VD}$<$ double $>$ valores, \hyperlink{classingredientes}{ingredientes} is)
+\item 
+void \hyperlink{tipos__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}{Muestra\+Parametros} ()
+\item 
+int \hyperlink{tipos__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}\label{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!desviacion@{desviacion}}
+\index{desviacion@{desviacion}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{desviacion()}{desviacion()}}
+{\footnotesize\ttfamily double desviacion (\begin{DoxyParamCaption}\item[{\hyperlink{classVD}{VD}$<$ double $>$}]{valores,  }\item[{double}]{var }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+34                                                   \{
+35   
+36   \textcolor{keywordflow}{if}(var == 0)
+37     var = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valores);
+38 
+39   \textcolor{keywordflow}{return} sqrt(var);
+40 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{tipos__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!main@{main}}
+\index{main@{main}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+80 \{
+81   \textcolor{keywordflow}{if}(argc!=3)\{
+82 
+83       \hyperlink{tipos__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}{MuestraParametros}();
+84       \textcolor{keywordflow}{return} 0;
+85 \}
+86 
+87 \textcolor{keywordtype}{string} nf = argv[1];
+88 ifstream f(nf);
+89 
+90 \textcolor{keywordflow}{if}(!f)\{
+91 
+92     cout << \textcolor{stringliteral}{"No puedo abrir "} << nf << endl;
+93     \textcolor{keywordflow}{return} 0;
+94 \}
+95 
+96 \textcolor{keywordtype}{string} linea;
+97 getline(f, linea);
+98 
+99 f.seekg(0);
+100 \hyperlink{classingredientes}{ingredientes} all\_ingre;
+101 f >> all\_ingre;
+102 
+103 \hyperlink{classVD}{VD<string>} tipos = all\_ingre.getTipos();
+104 
+105 cout << \textcolor{stringliteral}{"Los tipos de alimentos son: "} << endl;
+106 
+107 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < tipos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); ++i)\{
+108 
+109     cout << tipos[i] << endl;
+110 \}
+111 
+112 cout << \textcolor{stringliteral}{"\(\backslash\)n Pulsa una tecla para continuar...."} << endl;
+113 cin.get();
+114 
+115 \textcolor{keywordtype}{string} tipo = argv[2];
+116 \hyperlink{classingredientes}{ingredientes} ingre\_tipo = all\_ingre.\hyperlink{classingredientes_a160ecb07facb16cbe7369ea797c67549}{getIngredienteTipo}(tipo);
+117 cout << \textcolor{stringliteral}{"Los ingredientes de tipo "} << tipo << \textcolor{stringliteral}{" son: "} << endl << ingre\_tipo << endl;
+118 
+119 cout << \textcolor{stringliteral}{"\(\backslash\)n Pulsa una tecla para continuar...."} << endl;
+120 cin.\hyperlink{classingredientes_a920e0fbbf533a8ba934cfc485b2e44c0}{get}();
+121 
+122 \hyperlink{classVD}{VD <double>} valoresC, valoresHc, valoresP, valoresG, valoresF;
+123 \textcolor{keywordtype}{double} mediaC, mediaHc, mediaP, mediaG, mediaF;
+124 \textcolor{keywordtype}{double} desvC, desvHc, desvP, desvG, desvF;
+125 \textcolor{keywordtype}{double} varC, varHc, varP, varG, varF;
+126 \hyperlink{classingrediente}{ingrediente} maxC, maxHc, maxP, maxG, maxF;
+127 \hyperlink{classingrediente}{ingrediente} minC, minHc, minP, minG, minF;
+128 
+129 \textcolor{comment}{//Se insertan los valores de cada atributo}
+130 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < ingre\_tipo.\hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size}(); i++)\{
+131 
+132     valoresC.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(ingre\_tipo[i].getCalorias(), i);
+133     valoresHc.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(ingre\_tipo[i].getHc(), i);
+134     valoresP.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(ingre\_tipo[i].getProteinas(), i);
+135     valoresG.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(ingre\_tipo[i].getGrasas(), i);
+136     valoresF.\hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar}(ingre\_tipo[i].getFibra(), i);
+137 \}
+138 
+139 \textcolor{comment}{//Medias}
+140 
+141 mediaC = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valoresC);
+142 mediaHc = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valoresHc);
+143 mediaP = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valoresP);
+144 mediaG = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valoresG);
+145 mediaF = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valoresF);
+146 
+147 \textcolor{comment}{//Varianza}
+148 
+149 varC = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valoresC);
+150 varHc = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valoresHc);
+151 varP = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valoresP);
+152 varG = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valoresG);
+153 varF = \hyperlink{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}{varianza}(valoresF);
+154 
+155 \textcolor{comment}{//Desviaciones}
+156 
+157 desvC = \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion}(valoresC,varC);
+158 desvHc = \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion}(valoresHc,varHc);
+159 desvP = \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion}(valoresP,varP);
+160 desvG = \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion}(valoresG,varG);
+161 desvF = \hyperlink{tipos__ingredientes_8cpp_aa5ba5c56271838f3665525c15a82747e}{desviacion}(valoresF,varF);
+162 
+163 \textcolor{comment}{//Maximos}
+164 
+165 maxC = \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo}(valoresC, ingre\_tipo);
+166 maxHc = \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo}(valoresHc, ingre\_tipo);
+167 maxP = \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo}(valoresP, ingre\_tipo);
+168 maxG = \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo}(valoresG, ingre\_tipo);
+169 maxF = \hyperlink{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}{maximo}(valoresF, ingre\_tipo);
+170 
+171 \textcolor{comment}{//Minimos}
+172 
+173 minC = \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo}(valoresC, ingre\_tipo);
+174 minHc = \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo}(valoresHc, ingre\_tipo);
+175 minP = \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo}(valoresP, ingre\_tipo);
+176 minG = \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo}(valoresG, ingre\_tipo);
+177 minF = \hyperlink{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}{minimo}(valoresF, ingre\_tipo);
+178 
+179 
+180 cout << \textcolor{stringliteral}{"Estadistica\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl;
+181 
+182 cout << \textcolor{stringliteral}{"Tipo de Alimento "} << tipo << endl;
+183 
+184 cout << \textcolor{stringliteral}{"Promedio +- Desviacion"} << endl;
+185 
+186 cout << \textcolor{stringliteral}{"Calorias          "} << \textcolor{stringliteral}{"Hidratos de Carb      "} << \textcolor{stringliteral}{"Proteinas        "} << \textcolor{stringliteral}{"Grasas        "} << \textcolor{stringliteral}{"
+      Fibra"} << endl;
+187 
+188 cout << mediaC << \textcolor{stringliteral}{"+-"} << desvC << \textcolor{stringliteral}{"      "} << mediaHc << \textcolor{stringliteral}{"+-"} << desvHc << \textcolor{stringliteral}{"      "} << mediaP << \textcolor{stringliteral}{"+-"} << 
+      desvP << \textcolor{stringliteral}{"    "} << mediaG << \textcolor{stringliteral}{"+-"} << desvG << \textcolor{stringliteral}{"    "} << mediaF << \textcolor{stringliteral}{"+-"} << desvF << endl;
+189 
+190 cout << \textcolor{stringliteral}{"Maximos Valores"} << endl;
+191 
+192 cout << \textcolor{stringliteral}{"Calorias (Alimento)       "} << \textcolor{stringliteral}{"Hidratos de Carb (Alimento)      "} << \textcolor{stringliteral}{"Proteinas (Alimento)     "} 
+      << \textcolor{stringliteral}{"Grasas (Alimento)    "} << \textcolor{stringliteral}{"Fibra (Alimento)"} << endl;
+193 
+194 cout << maxC.\hyperlink{classingrediente_ad30d67f12692a2646c6a989e65770f09}{getCalorias}() <<\textcolor{stringliteral}{" "}<<maxC.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"       "} << maxHc.
+      \hyperlink{classingrediente_abb195921a716feed48c16f6aa5729218}{getHc}() <<\textcolor{stringliteral}{" "}<< maxHc.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"                "} << maxP.
+      \hyperlink{classingrediente_aa6252c91568acf58332ec1a7202cd1c4}{getProteinas}() <<\textcolor{stringliteral}{" "}<< maxP.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"       "} << maxG.
+      \hyperlink{classingrediente_a2e5b063794ee06868067df52ad35a23c}{getGrasas}() <<\textcolor{stringliteral}{" "}<< maxG.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"        "} << maxF.
+      \hyperlink{classingrediente_a2477818722228f8b674a9ddd9e6743e7}{getFibra}() <<\textcolor{stringliteral}{" "}<< maxF.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{" "} << endl;
+195 
+196 cout << \textcolor{stringliteral}{"Minimos Valores"} << endl;
+197 
+198 cout << \textcolor{stringliteral}{"Calorias (Alimento)       "} << \textcolor{stringliteral}{"Hidratos de Carb (Alimento)      "} << \textcolor{stringliteral}{"Proteinas (Alimento)     "} 
+      << \textcolor{stringliteral}{"Grasas (Alimento)    "} << \textcolor{stringliteral}{"Fibra (Alimento)"} << endl;
+199 
+200 cout << minC.\hyperlink{classingrediente_ad30d67f12692a2646c6a989e65770f09}{getCalorias}() <<\textcolor{stringliteral}{" "}<<minC.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"    "} << minHc.
+      \hyperlink{classingrediente_abb195921a716feed48c16f6aa5729218}{getHc}() <<\textcolor{stringliteral}{" "}<< minHc.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"                "} << minP.
+      \hyperlink{classingrediente_aa6252c91568acf58332ec1a7202cd1c4}{getProteinas}() << \textcolor{stringliteral}{" "} << minP.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{"                 "} << minG.
+      \hyperlink{classingrediente_a2e5b063794ee06868067df52ad35a23c}{getGrasas}() <<\textcolor{stringliteral}{" "}<< minG.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{" "} << minF.\hyperlink{classingrediente_a2477818722228f8b674a9ddd9e6743e7}{getFibra}() <<\textcolor{stringliteral}{" "}<< minF.
+      \hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() << \textcolor{stringliteral}{" "} << endl;
+201 
+202 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}\label{tipos__ingredientes_8cpp_a4408227be268bd7780ebc663569657bb}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!maximo@{maximo}}
+\index{maximo@{maximo}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{maximo()}{maximo()}}
+{\footnotesize\ttfamily \hyperlink{classingrediente}{ingrediente} maximo (\begin{DoxyParamCaption}\item[{\hyperlink{classVD}{VD}$<$ double $>$}]{valores,  }\item[{\hyperlink{classingredientes}{ingredientes}}]{is }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+43                                                         \{
+44 
+45   \hyperlink{classingrediente}{ingrediente} ing = is[0];
+46   \textcolor{keywordtype}{double} max = valores[0];
+47 
+48   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < is.\hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size}(); i++)\{
+49     \textcolor{keywordflow}{if} (valores[i] > max)\{
+50       ing = is[i];
+51       max = valores[i];
+52     \}
+53   \}
+54  
+55   cout<<endl<<endl<<endl;
+56   \textcolor{keywordflow}{return} ing;
+57 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}\label{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!media@{media}}
+\index{media@{media}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{media()}{media()}}
+{\footnotesize\ttfamily double media (\begin{DoxyParamCaption}\item[{\hyperlink{classVD}{VD}$<$ double $>$}]{valores }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+8                                  \{
+9 
+10     \textcolor{keywordtype}{double} suma = 0.0, \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media};
+11 
+12     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < valores.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+13 
+14         suma += valores[i];
+15     \}
+16 
+17     \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media} = suma / valores.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}();
+18 
+19     \textcolor{keywordflow}{return} \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media};
+20 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}\label{tipos__ingredientes_8cpp_ae1260e5c0a814b8db82e94bc2a693a71}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!minimo@{minimo}}
+\index{minimo@{minimo}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{minimo()}{minimo()}}
+{\footnotesize\ttfamily \hyperlink{classingrediente}{ingrediente} minimo (\begin{DoxyParamCaption}\item[{\hyperlink{classVD}{VD}$<$ double $>$}]{valores,  }\item[{\hyperlink{classingredientes}{ingredientes}}]{is }\end{DoxyParamCaption})}
+
+
+
+Definition at line 59 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+59                                                         \{
+60 
+61     \hyperlink{classingrediente}{ingrediente} ing = is[0];
+62     \textcolor{keywordtype}{double} min = valores[0];
+63 
+64     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < is.\hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size}(); i++)\{
+65         \textcolor{keywordflow}{if} (valores[i] < min)\{
+66             ing = is[i];
+67             min = valores[i];
+68         \}
+69     \}
+70     \textcolor{keywordflow}{return} ing;
+71   \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}\label{tipos__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!Muestra\+Parametros@{Muestra\+Parametros}}
+\index{Muestra\+Parametros@{Muestra\+Parametros}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{Muestra\+Parametros()}{MuestraParametros()}}
+{\footnotesize\ttfamily void Muestra\+Parametros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+73                         \{
+74 
+75     cout<<\textcolor{stringliteral}{"1.- Dime el nombre del fichero con los ingredientes"}<<endl;
+76   cout<<\textcolor{stringliteral}{"2.- Dime el nombre del tipo de ingrediente"}<<endl;
+77 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}\label{tipos__ingredientes_8cpp_ad4d917a006354b42a930fcdf7e026827}} 
+\index{tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}!varianza@{varianza}}
+\index{varianza@{varianza}!tipos\+\_\+ingredientes.\+cpp@{tipos\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{varianza()}{varianza()}}
+{\footnotesize\ttfamily double varianza (\begin{DoxyParamCaption}\item[{\hyperlink{classVD}{VD}$<$ double $>$}]{valores }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file tipos\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+22                                    \{
+23   
+24   \textcolor{keywordtype}{int} n = valores.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}();
+25   \textcolor{keywordtype}{double} pro = \hyperlink{tipos__ingredientes_8cpp_af5d1a3d48e3f3a1fb7545f410fd263d9}{media}(valores);
+26   \textcolor{keywordtype}{double} var = 0;
+27 
+28   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i< valores.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)
+29     var += pow((valores[i] - pro), 2);
+30 
+31   \textcolor{keywordflow}{return} var / n;
+32 \}
+\end{DoxyCode}

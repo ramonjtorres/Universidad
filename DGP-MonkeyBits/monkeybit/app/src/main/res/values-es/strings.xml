@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Routability</string>
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="repeat_password">Repita Contraseña</string>
+    <string name="signed_in_successfully">Sesión iniciada correctamente</string>
+    <string name="signed_in_fail">Fallo al iniciar sesión</string>
+    <string name="empty_fields">No ha rellenado todos los campos</string>
+    <string name="logged_out">Sesión cerrada</string>
+    <string name="logged_out_fail">No tienes sesión iniciada</string>
+    <string name="look_profile">Perfil</string>
+    <string name="new_user">¿No tienes cuenta? Registrate aquí</string>
+    <string name="user_name">Nombre de usuario</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="passwords_not_equal">Las contraseñas no coinciden</string>
+    <string name="create_account_succesfully">Cuenta creada correctamente</string>
+    <string name="create_account_fail">Fallo al crear la cuenta</string>
+    <string name="deleted_account">Tu cuenta ha sido eliminada</string>
+    <string name="delete_account">Eliminar Cuenta</string>
+    <string name="delete_account_fail">Por seguridad, deberás iniciar sesión de nuevo antes de eliminar la cuenta.Inténtalo de nuevo cuando hayas iniciado sesión</string>
+    <string name="rutes">Rutas</string>
+    <string name="newName">Escribe el nuevo nombre</string>
+    <string name="noUser">El usuario no está autenticado</string>
+    <string name="btChange"> Cambia el nombre </string>
+    <string name="btUpdate"> Actualiza </string>
+    <string name="btUpdateDesc"> Clica para actualizar los datos del perfil </string>
+    <string name="updateNameToast">Actualizado correctamente</string>
+    <string name="updateNameToastCancel">No se ha podido actualizar</string>
+    <string name="look_fav">Favoritos</string>
+    <string name="look_maps">Mapas</string>
+    <string name="accesibility_options">Opciones de Accesibilidad</string>
+    <string name="options_menu">Menú de Opciones</string>
+    <string name="alert_dialog_tittle">Atención</string>
+    <string name="dialog_alert_question_body">¿Estás seguro de que deseas</string>
+    <string name="alert_dialog_positive">Aceptar</string>
+    <string name="alert_dialog_negative">Cancelar</string>
+    <string name="close_session_dialog">cerrar sesión</string>
+    <string name="delete_account_dialog">borrar cuenta</string>
+    <string name="places">Lugares</string>
+    <string name="search">Buscar</string>
+    <string name="suggest_place">Sugerir Lugar</string>
+
+
+    <string name="suggest_route_title">Creación Ruta</string>
+    <string name="new_name_route">Nombre de la Ruta *</string>
+    <string name="new_route_description">Descripción de la Ruta *</string>
+    <string name="route_localization">Ubicación de la Ruta *</string>
+    <string name="suggest_button">Sugerir</string>
+
+
+    <string name="suggest_place_title">Creación Lugar</string>
+    <string name="new_name_place">Nombre del Lugar * </string>
+    <string name="new_place_description">Descripción del Lugar * </string>
+    <string name="place_localization">Ubicación del Lugar *</string>
+
+
+    <string name="rutes_menu">Rutas/Lugares</string>
+    <string name="tittle_rute">Nombre de ruta</string>
+    <string name="tittle_place">Nombre de Lugar</string>
+    <string name="desc_rute">Descripción</string>
+    <string name="list_desc_route">Descricion de la imagen</string>
+    <string name="post_desc_img">Descricion de la imagen</string>
+    <string name="post_text_tittle">Titulo de ruta</string>
+    <string name="post_text_desc">Descricion de la ruta</string>
+    <string name="post_rt_info_places">Lugares por los que pasa la ruta</string>
+    <string name="post_rt_info_rating">Valoración</string>
+    <string name="post_rt_info_location">Localización</string>
+    <string name="post_rt_info_accessibility">Accesibilidad</string>
+    <string name="pos_rt_fav">Añadir a favoritos</string>
+    <string name="post_follow_bt_rt"> Seguir la ruta</string>
+    <string name="image_description"></string>
+    <string name="comments">Comentarios</string>
+    <string name="remove_favorites">Eliminado de favoritos</string>
+    <string name="add_favorites">Añadido a favoritos</string>
+    <string name="comments_here">Comenta aquí</string>
+    <string name="send_comment">Enviar tu comentario</string>
+    <string name="write_comment">Escribe tu comentario...</string>
+    <string name="report">Denunciar Comentario</string>
+
+    <!-- Rating -->
+    <string name="descriptionRatingRt">Valoración de la ruta</string>
+    <string name="descriptionRatingPl">Valoración del lugar</string>
+    <string name="notrating">No hay actualmente valoraciones</string>
+
+    <!-- Favorites -->
+    <string name="should_login">Debes iniciar sesión</string>
+    <string name="added_favorites">Este lugar se ha añadido a favoritos</string>
+
+    <!-- Accesibility-->
+    <string name="descriptionAccesibilityRt">Descripción de la accesibilidad de la ruta</string>
+    <string name="descriptionAccesibilityPl">Descripción de la accesibilidad del lugar</string>
+    <string name="introduction">Este lugar cuenta con elementos de accesibilidad para </string>
+    <string name="notintroduction">Este lugar no tiene elementos accesibles para las personas con discapacidad. </string>
+    <string name="red_mobility">personas con movilidad reducida </string>
+    <string name="red_vision">personas con visión reducida </string>
+    <string name="colour_blind">personas daltónicas </string>
+    <string name="deaf">personas sordas </string>
+    <string name="foreigner">personas extranjeras.</string>
+
+    <!-- BD TEST-->
+    <string name="title_fragment">Inicio de Sesión</string>
+    <string name="title_user">Usuario: </string>
+    <string name="title_pwd">Contraseña: </string>
+    <string name="title_boton">Comprobar</string>
+    <string name="login">COMPROBAR RUTA</string>
+    <string name="id_bd_test">test</string>
+    <string name = "errorListRoute"> Un error inersperado, no puedo conectar a la Base de Datos</string>
+    <string name="place_suggested">Lugar sugerido correctamente.</string>
+    <string name="title_place">Titulo del lugar</string>
+    <string name="description_place">descripción del lugar</string>
+    <string name="image_link">URL de la imagen * </string>
+    <string name="accesibility_red_movility">Movilidad reducida</string>
+    <string name="accesibility_red_vision">Visión reducida</string>
+    <string name="accesibility_colour_blind">Daltónico</string>
+    <string name="accesibility_deaf">Sordo</string>
+    <string name="accesibility_foreigner">Idiomas</string>
+
+
+    <!--Route List Place-->
+    <string name="NoPlaceTittle">Lo sentimos</string>
+    <string name="NoPlaceDesc">No hay ningún lugar asociado</string>
+    <string name="is_visited_place">No has visitado este sitio y por ello no puedes comentar</string>
+    <string name="message_ban_place">denunciar este comentario</string>
+    <string name="message_ban_place_ok">Se ha denunciado correctamente el mensaje actualice</string>
+
+    <string name="previous_page">Página anterior</string>
+    <string name="next_page">Página siguiente</string>
+    <string name="comment_sent">Comentario enviado con éxito</string>
+    <string name="suggest_route">Sugerir Ruta</string>
+    <string name="added_places_text">Lugares añadidos</string>
+    <string name="available_places_text">Lugares Disponibles</string>
+    <string name="who_can_access">Selecciona para quién es apto el lugar</string>
+    <string name="suggested_route">Ruta sugerida correctamente</string>
+    <string name="search_check_foreigner">Extranjero</string>
+
+    <!-- SEARCH-->
+    <string name="search_box">Buscar...</string>
+    <string name="search_accessibility">Accesibilidad:</string>
+    <string name="search_type">Tipo:</string>
+    <string name="search_filters">FILTROSS:</string>
+    <string name="search_check_route">Rutas</string>
+    <string name="search_check_place">Lugares</string>
+    <string name="search_check_redmovility">Movilidad reducida</string>
+    <string name="search_check_redvision">Visión reducida</string>
+    <string name="search_check_colorblind">Daltónico</string>
+    <string name="search_check_deaf">Sordo</string>
+
+    <string name="prevButton">Anterior</string>
+    <string name="nextButton">Siguiente</string>
+</resources>

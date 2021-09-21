@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">Routability</string>
+    <string name="sign_in">Sign In</string>
+    <string name="logout">Log Out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="signed_in_successfully">SignIn successfully!</string>
+    <string name="signed_in_fail">Authentication fail!</string>
+    <string name="empty_fields">The text fields are empty</string>
+    <string name="logged_out">Log Out</string>
+    <string name="logged_out_fail">You aren\'t signed in!</string>
+    <string name="look_profile">Profile</string>
+    <string name="new_user">Haven\'t got an account? Register Here</string>
+    <string name="user_name">User name</string>
+    <string name="create_account">Create Account</string>
+    <string name="passwords_not_equal">Password aren\'t equals. Check this.</string>
+    <string name="create_account_succesfully">Created new account!</string>
+    <string name="create_account_fail">Account creation fail!</string>
+    <string name="deleted_account">Your account has been deleted.</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="delete_account_fail">For security you must reauthenticate before delete the account. Please sign in and then come here to delete the account.</string>
+    <string name="noUser">the user is not authenticated</string>
+    <string name="newName">Type the new name</string>
+    <string name="btChange"> Change the name </string>
+    <string name="btUpdate"> Update </string>
+    <string name="btUpdateDesc"> Click to update the name </string>
+    <string name="rutes">Rutes</string>
+    <string name="updateNameToast">profile update success</string>
+    <string name="updateNameToastCancel">Profile not update</string>
+    <string name="look_fav">Favorites</string>
+    <string name="look_maps">Maps</string>
+    <string name="accesibility_options">Accesibility Options</string>
+    <string name="options_menu">Options Menu</string>
+    <string name="alert_dialog_tittle">Attention</string>
+    <string name="dialog_alert_question_body">Are you sure you want to</string>
+    <string name="alert_dialog_positive">Accept</string>
+    <string name="alert_dialog_negative">Refuse</string>
+    <string name="close_session_dialog">logout</string>
+    <string name="delete_account_dialog">delete account</string>
+    <string name="places">Places</string>
+    <string name="search">Search</string>
+    <string name="suggest_place">Suggest Place</string>
+    <string name="suggest_route">Suggest Route</string>
+
+    <string name="suggest_route_title">New Route</string>
+    <string name="new_name_route">New Route\'s Name *</string>
+    <string name="new_route_description">Route\'s Description *</string>
+    <string name="route_localization">Route\'s Localization *</string>
+
+    <string name="suggest_place_title">New Place</string>
+    <string name="new_name_place">New Place\'s Name *</string>
+    <string name="new_place_description">Place Description *</string>
+    <string name="place_localization">Place Localization *</string>
+
+
+    <string name="suggest_button">Suggest</string>
+
+    <string name="rutes_menu">Rutes/Places</string>
+    <string name="tittle_rute">Rute Name</string>
+    <string name="tittle_place">Place Name</string>
+    <string name="desc_rute">Description</string>
+    <string name="list_desc_route">Description of the Image</string>
+    <string name="post_desc_img">Description of the image</string>
+    <string name="post_text_tittle"> Tittle of the route</string>
+    <string name="post_text_desc">Description of the route</string>
+    <string name="post_rt_info_places">Places through the route </string>
+    <string name="post_rt_info_rating">Rating</string>
+    <string name="post_rt_info_location">Location</string>
+    <string name="post_rt_info_accessibility">Accessibility</string>
+    <string name="pos_rt_fav">Add to favourites</string>
+    <string name="post_follow_bt_rt"> Follow route</string>
+    <string name="image_description"></string>
+    <string name="comments">Comments</string>
+    <string name="remove_favorites">Removed from favorites</string>
+    <string name="add_favorites">Added to favorites</string>
+    <string name="comments_here">Comments Here</string>
+    <string name="send_comment">Send your comment</string>
+    <string name="write_comment">Write your comment...</string>
+    <string name="report">Report Comment</string>
+
+    <!-- Rating -->
+    <string name="descriptionRatingRt">This field describes the rating of the route</string>
+    <string name="descriptionRatingPl">This field describes the rating of the place</string>
+    <string name="notrating">There are currently no reviews available</string>
+
+    <!-- Accesibility-->
+    <string name="descriptionAccesibilityRt">This field describes the accesibility of the route</string>
+    <string name="descriptionAccesibilityPl">This field describes the accesibility of the place</string>
+    <string name="introduction">This place has accessibility elements for </string>
+    <string name="notintroduction">This place does not have accessible elements for the persons with disability. </string>
+    <string name="red_mobility">people with reduced mobility </string>
+    <string name="red_vision">people with reduced vision </string>
+    <string name="colour_blind">colorblind people </string>
+    <string name="deaf">deaf people </string>
+    <string name="foreigner">foreign people.</string>
+
+    <!-- Favorites -->
+    <string name="should_login">You should login</string>
+    <string name="added_favorites">This place has been added to favorites</string>
+
+    <!-- BD TEST-->
+    <string name="title_fragment">Inicio de Sesión</string>
+    <string name="title_user">User: </string>
+    <string name="title_pwd">Password: </string>
+    <string name="title_boton">Check</string>
+    <string name="login">CHECK ROUTE</string>
+    <string name="id_bd_test">test</string>
+    <string name="title_place">Tittle of the place</string>
+    <string name="description_place">description of the place</string>
+
+
+    <string name="errorListRoute">Error al buscar en la base de datos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="place_suggested">Place successfully suggested.</string>
+    <string name="image_link">Image link * </string>
+    <string name="accesibility_red_movility">Reduce mobility</string>
+    <string name="accesibility_red_vision">Reduce vision</string>
+    <string name="accesibility_colour_blind">Colour Blind</string>
+    <string name="accesibility_deaf">Deaf</string>
+    <string name="accesibility_foreigner">Foreigner</string>
+
+
+    <string name="NoPlaceTittle">Sorry</string>
+    <string name="NoPlaceDesc">There is no place</string>
+    <string name="is_visited_place">You have not visited this site and therefore can not comment</string>
+    <string name="message_ban_place">ban this comment</string>
+    <string name="message_ban_place_ok">The current message has been reported correctly.</string>
+
+    <string name="previous_page">Previous page</string>
+    <string name="next_page">Next page</string>
+    <string name="comment_sent">Comment sent successfully</string>
+    <string name="added_places_text">Added Places</string>
+    <string name="available_places_text">Available Places</string>
+    <string name="who_can_access">Select who can access this place</string>
+    <string name="suggested_route">Route successfully suggested</string>
+
+    <!-- SEARCH-->
+    <string name="search_box">Search...</string>
+    <string name="search_accessibility">Accessibility:</string>
+    <string name="search_type">Type:</string>
+    <string name="search_filters">FILTERS:</string>
+    <string name="search_check_route">Routes</string>
+    <string name="search_check_place">Places</string>
+    <string name="search_check_redmovility">Red Movility</string>
+    <string name="search_check_redvision">Red Vision</string>
+    <string name="search_check_colorblind">Color-blind</string>
+    <string name="search_check_deaf">Deaf</string>
+    <string name="search_check_foreigner">Foreigner</string>
+
+    <string name="prevButton">Previous</string>
+    <string name="nextButton">Next</string>
+
+</resources>

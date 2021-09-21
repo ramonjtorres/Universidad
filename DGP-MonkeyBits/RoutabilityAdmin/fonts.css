@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?1lvwiy');
+  src:  url('fonts/icomoon.eot?1lvwiy#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?1lvwiy') format('truetype'),
+    url('fonts/icomoon.woff?1lvwiy') format('woff'),
+    url('fonts/icomoon.svg?1lvwiy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-language:before {
+  content: "\e901";
+  font-size: 25px;
+}
+.icon-wheelchair:before {
+  content: "\e902";
+  font-size: 25px;
+}
+.icon-deaf:before {
+  content: "\e903";
+  font-size: 25px;
+}
+.icon-deafness:before {
+  content: "\e903";
+  font-size: 25px;
+}
+.icon-hard-of-hearing:before {
+  content: "\e903";
+  font-size: 25px;
+}
+.icon-home:before {
+  content: "\e900";
+  font-size: 25px;
+}
+.icon-pencil:before {
+  content: "\e905";
+  font-size: 25px;
+}
+.icon-eyedropper:before {
+  content: "\e90a";
+  font-size: 25px;
+}
+.icon-paint-format:before {
+  content: "\e90c";
+  font-size: 25px;
+}
+.icon-library:before {
+  content: "\e921";
+  font-size: 25px;
+}
+.icon-map:before {
+  content: "\e94b";
+  font-size: 25px;
+}
+.icon-bell:before {
+  content: "\e951";
+  font-size: 25px;
+}
+.icon-drawer:before {
+  content: "\e95c";
+  font-size: 25px;
+}
+.icon-bubble:before {
+  content: "\e96b";
+  font-size: 25px;
+}
+.icon-users:before {
+  content: "\e972";
+  font-size: 25px;
+}
+.icon-lock:before {
+  content: "\e98f";
+  font-size: 25px;
+}
+.icon-unlocked:before {
+  content: "\e990";
+  font-size: 25px;
+}
+.icon-eye-minus:before {
+  content: "\e9d0";
+  font-size: 25px;
+}
+.icon-plus:before {
+  content: "\ea0a";
+  font-size: 25px;
+}
+.icon-cross:before {
+  content: "\ea0f";
+  font-size: 25px;
+}
+.icon-enter:before {
+  content: "\ea13";
+  font-size: 25px;
+}

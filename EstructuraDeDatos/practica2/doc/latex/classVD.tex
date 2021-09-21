@@ -1,0 +1,393 @@
+\hypertarget{classVD}{}\section{VD$<$ T $>$ Class Template Reference}
+\label{classVD}\index{V\+D$<$ T $>$@{V\+D$<$ T $>$}}
+
+
+T.\+D.\+A. Vector Dinámico.  
+
+
+
+
+{\ttfamily \#include $<$V\+D.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVD_a080ac98ef3d7377f287556c21637a073}{VD} (int n=10)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase. \end{DoxyCompactList}\item 
+\hyperlink{classVD_a4f22b92dd8ace25d50311ccd61508dfc}{VD} (const \hyperlink{classVD}{VD}$<$ T $>$ \&original)
+\begin{DoxyCompactList}\small\item\em Constructor de copias de la clase. \end{DoxyCompactList}\item 
+\hyperlink{classVD_a0533f99aa2fee31fde63edd6c4b8bb2d}{$\sim$\+VD} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase. \end{DoxyCompactList}\item 
+int \hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size} () const
+\begin{DoxyCompactList}\small\item\em Tamaño del vector. \end{DoxyCompactList}\item 
+T \& \hyperlink{classVD_a021495b46a5b59c7fd1e25653ab8f824}{operator\mbox{[}$\,$\mbox{]}} (int i)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+const T \& \hyperlink{classVD_ab0c8adba584dcbb2f07171dedcfc395e}{operator\mbox{[}$\,$\mbox{]}} (int i) const
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{classVD}{VD}$<$ T $>$ \& \hyperlink{classVD_a5f3f80d38810a3d6c10953606ee47447}{operator=} (const \hyperlink{classVD}{VD}$<$ T $>$ \&vd)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador =. \end{DoxyCompactList}\item 
+void \hyperlink{classVD_a10bba26b426aa83456437543d794b429}{insertar} (const T \&dato, int pos)
+\begin{DoxyCompactList}\small\item\em Inserta un elemento en el vector dinámico. \end{DoxyCompactList}\item 
+void \hyperlink{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}{borrar} (int pos)
+\begin{DoxyCompactList}\small\item\em Borra un elemento del vector dinámico. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class V\+D$<$ T $>$}
+
+T.\+D.\+A. Vector Dinámico. 
+
+T.\+D.\+A. Vector dinamico
+
+Una instancia  del tipo de datos abstractos {\ttfamily \hyperlink{classVD}{VD}} es un objeto del tipo vector con elementos, y con métodos de inserción, borrado y consulta.
+
+\begin{DoxyAuthor}{Author}
+Ramón Jesús Torres Madrid 
+
+David López Maldonado 
+\end{DoxyAuthor}
+
+
+Definition at line 24 of file V\+D.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVD_a080ac98ef3d7377f287556c21637a073}\label{classVD_a080ac98ef3d7377f287556c21637a073}} 
+\index{VD@{VD}!VD@{VD}}
+\index{VD@{VD}!VD@{VD}}
+\subsubsection{\texorpdfstring{V\+D()}{VD()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classVD}{VD}$<$ T $>$\+::\hyperlink{classVD}{VD} (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & tamaño del vector, por defecto 10 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Crea el vector con tamaño reservado n 
+\end{DoxyReturn}
+
+
+Definition at line 23 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+23               \{
+24 
+25     \textcolor{keywordflow}{if}(n == 0)\{
+26 
+27         reservados = this->n = 0;
+28         datos = 0;
+29     \}
+30     \textcolor{keywordflow}{else}\{
+31 
+32         reservados = n;
+33         this->n = 0;
+34         datos = \textcolor{keyword}{new} T[reservados];
+35     \}
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a4f22b92dd8ace25d50311ccd61508dfc}\label{classVD_a4f22b92dd8ace25d50311ccd61508dfc}} 
+\index{VD@{VD}!VD@{VD}}
+\index{VD@{VD}!VD@{VD}}
+\subsubsection{\texorpdfstring{V\+D()}{VD()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classVD}{VD}$<$ T $>$\+::\hyperlink{classVD}{VD} (\begin{DoxyParamCaption}\item[{const \hyperlink{classVD}{VD}$<$ T $>$ \&}]{original }\end{DoxyParamCaption})}
+
+
+
+Constructor de copias de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original.\+datos} & elementos del vector a construir \\
+\hline
+{\em original.\+n} & tamaño del vector a construir \\
+\hline
+{\em original.\+reservados} & tamaño reservado del vector a construir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+40                               \{
+41 
+42     reservados = original.reservados;
+43     n = original.n;
+44 
+45     \textcolor{keywordflow}{if}(reservados > 0)\{
+46 
+47         datos = \textcolor{keyword}{new} T[reservados];
+48     \}
+49     \textcolor{keywordflow}{else}\{
+50 
+51         datos = 0;
+52     \}
+53 
+54     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{
+55 
+56         datos[i] = original.datos[i];
+57     \}
+58 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a0533f99aa2fee31fde63edd6c4b8bb2d}\label{classVD_a0533f99aa2fee31fde63edd6c4b8bb2d}} 
+\index{VD@{VD}!````~VD@{$\sim$\+VD}}
+\index{````~VD@{$\sim$\+VD}!VD@{VD}}
+\subsubsection{\texorpdfstring{$\sim$\+V\+D()}{~VD()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classVD}{VD}$<$ T $>$\+::$\sim$\hyperlink{classVD}{VD} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor de la clase. 
+
+
+
+Definition at line 62 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+62           \{
+63 
+64     \textcolor{keywordflow}{if}(datos != 0)\{
+65 
+66         \textcolor{keyword}{delete}[] datos;
+67     \}
+68 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}\label{classVD_a56e6ae22f6c89d7f9f46412d4e2121a0}} 
+\index{VD@{VD}!borrar@{borrar}}
+\index{borrar@{borrar}!VD@{VD}}
+\subsubsection{\texorpdfstring{borrar()}{borrar()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \hyperlink{classVD}{VD}$<$ T $>$\+::borrar (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Borra un elemento del vector dinámico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & posición del elemento que se quiere borrar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 139 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+139                          \{
+140 
+141     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = pos; i < n-1; i++)\{
+142 
+143         datos[i] = datos[i+1];
+144     \}
+145 
+146     n--;
+147 
+148     \textcolor{keywordflow}{if}(n < reservados/4)\{
+149 
+150         resize(reservados/2);
+151     \}
+152 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a10bba26b426aa83456437543d794b429}\label{classVD_a10bba26b426aa83456437543d794b429}} 
+\index{VD@{VD}!insertar@{insertar}}
+\index{insertar@{insertar}!VD@{VD}}
+\subsubsection{\texorpdfstring{insertar()}{insertar()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \hyperlink{classVD}{VD}$<$ T $>$\+::insertar (\begin{DoxyParamCaption}\item[{const T \&}]{dato,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Inserta un elemento en el vector dinámico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em datos} & dato a insertar \\
+\hline
+{\em pos} & posición donde se quiere inserter datos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+121                                           \{
+122 
+123     \textcolor{keywordflow}{if}(n >= reservados)\{
+124 
+125         resize(2*reservados);
+126     \}
+127 
+128     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = n; i > pos; i--)\{
+129 
+130         datos[i] = datos[i-1];
+131     \}
+132 
+133     datos[pos] = dato;
+134     n++;
+135 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a5f3f80d38810a3d6c10953606ee47447}\label{classVD_a5f3f80d38810a3d6c10953606ee47447}} 
+\index{VD@{VD}!operator=@{operator=}}
+\index{operator=@{operator=}!VD@{VD}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{classVD}{VD}$<$ T $>$ \& \hyperlink{classVD}{VD}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classVD}{VD}$<$ T $>$ \&}]{vd }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador =. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vd.\+datos} & elementos del vector a asignar \\
+\hline
+{\em vd.\+n} & tamaño del vector a asignar \\
+\hline
+{\em vd.\+reservados} & tamaño reservado del vector a asignar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve una copia del vector vd 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+93                                        \{
+94 
+95     \textcolor{keywordflow}{if}(\textcolor{keyword}{this} != &vd)\{
+96 
+97         \textcolor{keywordflow}{if}(datos != 0)\{
+98 
+99             \textcolor{keyword}{delete}[] datos;
+100         \}
+101 
+102         reservados = vd.reservados;
+103         n = vd.n;
+104 
+105         \textcolor{keywordflow}{if}(vd.datos != 0)\{
+106 
+107             datos = \textcolor{keyword}{new} T[reservados];
+108         \}
+109 
+110         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; i++)\{
+111 
+112             datos[i] = vd.datos[i];
+113         \}
+114     \}
+115 
+116     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+117 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a021495b46a5b59c7fd1e25653ab8f824}\label{classVD_a021495b46a5b59c7fd1e25653ab8f824}} 
+\index{VD@{VD}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!VD@{VD}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \& \hyperlink{classVD}{VD}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posición en la que está el elemento que se busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el elemento en la posición i 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+79                           \{
+80 
+81     \textcolor{keywordflow}{return} datos[i];
+82 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_ab0c8adba584dcbb2f07171dedcfc395e}\label{classVD_ab0c8adba584dcbb2f07171dedcfc395e}} 
+\index{VD@{VD}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!VD@{VD}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T \& \hyperlink{classVD}{VD}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Sobrecarga del operador \mbox{[}\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & posición en la que está el elemento que se busca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devuelve el elemento en la posición i 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+86                                       \{
+87 
+88     \textcolor{keywordflow}{return} datos[i];
+89 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classVD_a411ad026db1c8e0617d9031f1f1017a5}\label{classVD_a411ad026db1c8e0617d9031f1f1017a5}} 
+\index{VD@{VD}!size@{size}}
+\index{size@{size}!VD@{VD}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \hyperlink{classVD}{VD}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Tamaño del vector. 
+
+\begin{DoxyReturn}{Returns}
+devuelve el tamaño del vector dinámico 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file V\+D.\+cpp.
+
+
+\begin{DoxyCode}
+72                      \{
+73 
+74     \textcolor{keywordflow}{return} n;
+75 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{VD_8h}{V\+D.\+h}\item 
+include/\hyperlink{VD_8cpp}{V\+D.\+cpp}\end{DoxyCompactItemize}

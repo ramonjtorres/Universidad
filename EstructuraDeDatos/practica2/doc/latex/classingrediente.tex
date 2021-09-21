@@ -1,0 +1,752 @@
+\hypertarget{classingrediente}{}\section{ingrediente Class Reference}
+\label{classingrediente}\index{ingrediente@{ingrediente}}
+
+
+T.\+D.\+A. Ingrediente.  
+
+
+
+
+{\ttfamily \#include $<$ingrediente.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classingrediente_a4f2c8e16106eb4cf5a8ad9695d7a3809}{ingrediente} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de la clase. \end{DoxyCompactList}\item 
+\hyperlink{classingrediente_af1786aa0950f0d9168ad051d4225622f}{ingrediente} (string n, int c, float hc, float p, float g, float f, string t)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase. \end{DoxyCompactList}\item 
+\hyperlink{classingrediente_ae9895931693d316de6db95820994fa91}{ingrediente} (const \hyperlink{classingrediente}{ingrediente} \&original)
+\begin{DoxyCompactList}\small\item\em Constructor de copias de la clase. \end{DoxyCompactList}\item 
+string \hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{get\+Nombre} ()
+\begin{DoxyCompactList}\small\item\em Nombre. \end{DoxyCompactList}\item 
+double \hyperlink{classingrediente_ad30d67f12692a2646c6a989e65770f09}{get\+Calorias} ()
+\begin{DoxyCompactList}\small\item\em Calorías. \end{DoxyCompactList}\item 
+double \hyperlink{classingrediente_abb195921a716feed48c16f6aa5729218}{get\+Hc} ()
+\begin{DoxyCompactList}\small\item\em Hc. \end{DoxyCompactList}\item 
+double \hyperlink{classingrediente_aa6252c91568acf58332ec1a7202cd1c4}{get\+Proteinas} ()
+\begin{DoxyCompactList}\small\item\em Proteinas. \end{DoxyCompactList}\item 
+double \hyperlink{classingrediente_a2e5b063794ee06868067df52ad35a23c}{get\+Grasas} ()
+\begin{DoxyCompactList}\small\item\em Grasas. \end{DoxyCompactList}\item 
+double \hyperlink{classingrediente_a2477818722228f8b674a9ddd9e6743e7}{get\+Fibra} ()
+\begin{DoxyCompactList}\small\item\em Fibra. \end{DoxyCompactList}\item 
+string \hyperlink{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}{get\+Tipo} ()
+\begin{DoxyCompactList}\small\item\em Tipo. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_aac5aba3c36aa762c72a8bc38271e4c12}{set\+Nombre} (string n)
+\begin{DoxyCompactList}\small\item\em Modificador de Nombre. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_ad58c1fc3e923d2ab95fdacd779c4f4e5}{set\+Calorias} (int c)
+\begin{DoxyCompactList}\small\item\em Modificador de Calorías. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_ad335883ec2bbe4e02cc6422c503944e3}{set\+Hc} (float hc)
+\begin{DoxyCompactList}\small\item\em Modificador de Hc. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_a5ee4fac5c35f8ff71e7f974d1675a626}{set\+Proteinas} (float p)
+\begin{DoxyCompactList}\small\item\em Modificador de Proteinas. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_a5b20e7a788dcdb5685c66c7362d65533}{set\+Grasas} (float g)
+\begin{DoxyCompactList}\small\item\em Modificador de Grasas. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_a13928358db435d4a42b348f6ea1ee548}{set\+Fibra} (float f)
+\begin{DoxyCompactList}\small\item\em Modificador de Fibra. \end{DoxyCompactList}\item 
+void \hyperlink{classingrediente_ae51c71ad615844974ee24bb2fe9c7b80}{set\+Tipo} (string t)
+\begin{DoxyCompactList}\small\item\em Modificador de Tipo. \end{DoxyCompactList}\item 
+bool \hyperlink{classingrediente_a13e14c58eee2955d3fa0383fd704d337}{operator==} (\hyperlink{classingrediente}{ingrediente} \&i)
+\begin{DoxyCompactList}\small\item\em Operador de igualdad entre dos ingredientes. \end{DoxyCompactList}\item 
+bool \hyperlink{classingrediente_a6b70e6c632d6a07bb5536114948f8e3c}{operator$<$} (\hyperlink{classingrediente}{ingrediente} \&i)
+\begin{DoxyCompactList}\small\item\em Operador menor entre dos ingredientes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classingrediente_af02aa89e83969f7073a8da7e64ad9b87}{operator$<$$<$} (ostream \&os, const \hyperlink{classingrediente}{ingrediente} \&i)
+\begin{DoxyCompactList}\small\item\em Salida de un ingrediente a ostream. \end{DoxyCompactList}\item 
+istream \& \hyperlink{classingrediente_a76d568aa86c9c0783c4b108b9e0f1023}{operator$>$$>$} (istream \&is, \hyperlink{classingrediente}{ingrediente} \&i)
+\begin{DoxyCompactList}\small\item\em Entrada de un ingrediente desde istream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T.\+D.\+A. Ingrediente. 
+
+Una instancia {\itshape c} del tipo de datos abstractos {\ttfamily Ingrediente} es un objeto que contiene la información de un ingrediente, como puede ser su nombre, calorías, Hidratos de carbono, proteínas, grasas, fibra y tipo.
+
+\begin{DoxyAuthor}{Author}
+Ramón Jesús Torres Madrid 
+
+David López Maldonado 
+\end{DoxyAuthor}
+
+
+Definition at line 25 of file ingrediente.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classingrediente_a4f2c8e16106eb4cf5a8ad9695d7a3809}\label{classingrediente_a4f2c8e16106eb4cf5a8ad9695d7a3809}} 
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{ingrediente()}{ingrediente()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ingrediente\+::ingrediente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto de la clase. 
+
+\begin{DoxyReturn}{Returns}
+Crea el ingrediente con todo a 0 
+\end{DoxyReturn}
+
+
+Definition at line 9 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+9                         \{
+10 
+11     nombre = \textcolor{stringliteral}{"Ingrediente"};
+12     calorias = 0;
+13     Hc = 0;
+14     proteinas = 0;
+15     grasas = 0;
+16     fibra = 0;
+17     tipo = \textcolor{stringliteral}{"Alimento"};
+18 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_af1786aa0950f0d9168ad051d4225622f}\label{classingrediente_af1786aa0950f0d9168ad051d4225622f}} 
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{ingrediente()}{ingrediente()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ingrediente\+::ingrediente (\begin{DoxyParamCaption}\item[{string}]{n,  }\item[{int}]{c,  }\item[{float}]{hc,  }\item[{float}]{p,  }\item[{float}]{g,  }\item[{float}]{f,  }\item[{string}]{t }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original.\+nombre} & nombre del ingrediente a construir \\
+\hline
+{\em original.\+calorias} & calorias (/100g) del ingrediente a construir \\
+\hline
+{\em original.\+Hc} & \% Hc del ingrediente a construir \\
+\hline
+{\em original.\+proteinas} & \% proteinas del ingrediente a construir \\
+\hline
+{\em original.\+grasas} & \% grasas del ingrediente a construir \\
+\hline
+{\em original.\+fibra} & \% fibra del ingrediente a construir \\
+\hline
+{\em original.\+tipo} & tipo de alimento del ingrediente a construir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Crea el ingrediente con la información dada 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+22                                                                                       \{
+23 
+24     nombre = n;
+25     calorias = c;
+26     Hc = hc;
+27     proteinas = p;
+28     grasas = g;
+29     fibra = f;
+30     tipo = t;
+31 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_ae9895931693d316de6db95820994fa91}\label{classingrediente_ae9895931693d316de6db95820994fa91}} 
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\index{ingrediente@{ingrediente}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{ingrediente()}{ingrediente()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ingrediente\+::ingrediente (\begin{DoxyParamCaption}\item[{const \hyperlink{classingrediente}{ingrediente} \&}]{original }\end{DoxyParamCaption})}
+
+
+
+Constructor de copias de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original.\+nombre} & nombre del ingrediente a construir \\
+\hline
+{\em original.\+calorias} & calorias (/100g) del ingrediente a construir \\
+\hline
+{\em original.\+Hc} & \% Hc del ingrediente a construir \\
+\hline
+{\em original.\+proteinas} & \% proteinas del ingrediente a construir \\
+\hline
+{\em original.\+grasas} & \% grasas del ingrediente a construir \\
+\hline
+{\em original.\+fibra} & \% fibra del ingrediente a construir \\
+\hline
+{\em original.\+tipo} & tipo de alimento del ingrediente a construir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+34                                                     \{
+35 
+36     nombre = original.nombre;
+37     calorias = original.calorias;
+38     Hc = original.Hc;
+39     proteinas = original.proteinas;
+40     grasas = original.grasas;
+41     fibra = original.fibra;
+42     tipo = original.tipo;
+43 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classingrediente_ad30d67f12692a2646c6a989e65770f09}\label{classingrediente_ad30d67f12692a2646c6a989e65770f09}} 
+\index{ingrediente@{ingrediente}!get\+Calorias@{get\+Calorias}}
+\index{get\+Calorias@{get\+Calorias}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Calorias()}{getCalorias()}}
+{\footnotesize\ttfamily double ingrediente\+::get\+Calorias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calorías. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve las calorías (/100g) del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 52 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+52                                \{
+53 
+54     \textcolor{keywordflow}{return} calorias;
+55 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a2477818722228f8b674a9ddd9e6743e7}\label{classingrediente_a2477818722228f8b674a9ddd9e6743e7}} 
+\index{ingrediente@{ingrediente}!get\+Fibra@{get\+Fibra}}
+\index{get\+Fibra@{get\+Fibra}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Fibra()}{getFibra()}}
+{\footnotesize\ttfamily double ingrediente\+::get\+Fibra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fibra. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el \% de fibra del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+76                             \{
+77 
+78     \textcolor{keywordflow}{return} fibra;
+79 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a2e5b063794ee06868067df52ad35a23c}\label{classingrediente_a2e5b063794ee06868067df52ad35a23c}} 
+\index{ingrediente@{ingrediente}!get\+Grasas@{get\+Grasas}}
+\index{get\+Grasas@{get\+Grasas}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Grasas()}{getGrasas()}}
+{\footnotesize\ttfamily double ingrediente\+::get\+Grasas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Grasas. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el \% de grasas del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+70                              \{
+71 
+72     \textcolor{keywordflow}{return} grasas;
+73 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_abb195921a716feed48c16f6aa5729218}\label{classingrediente_abb195921a716feed48c16f6aa5729218}} 
+\index{ingrediente@{ingrediente}!get\+Hc@{get\+Hc}}
+\index{get\+Hc@{get\+Hc}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Hc()}{getHc()}}
+{\footnotesize\ttfamily double ingrediente\+::get\+Hc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hc. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el \% de hidratos de carbono del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+58                          \{
+59 
+60     \textcolor{keywordflow}{return} Hc;
+61 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}\label{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}} 
+\index{ingrediente@{ingrediente}!get\+Nombre@{get\+Nombre}}
+\index{get\+Nombre@{get\+Nombre}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Nombre()}{getNombre()}}
+{\footnotesize\ttfamily string ingrediente\+::get\+Nombre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Nombre. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el nombre del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+46                              \{
+47 
+48     \textcolor{keywordflow}{return} nombre;
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_aa6252c91568acf58332ec1a7202cd1c4}\label{classingrediente_aa6252c91568acf58332ec1a7202cd1c4}} 
+\index{ingrediente@{ingrediente}!get\+Proteinas@{get\+Proteinas}}
+\index{get\+Proteinas@{get\+Proteinas}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Proteinas()}{getProteinas()}}
+{\footnotesize\ttfamily double ingrediente\+::get\+Proteinas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Proteinas. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el \% de proteínas del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 64 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+64                                 \{
+65 
+66     \textcolor{keywordflow}{return} proteinas;
+67 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}\label{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}} 
+\index{ingrediente@{ingrediente}!get\+Tipo@{get\+Tipo}}
+\index{get\+Tipo@{get\+Tipo}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{get\+Tipo()}{getTipo()}}
+{\footnotesize\ttfamily string ingrediente\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tipo. 
+
+\begin{DoxyReturn}{Returns}
+Devuelve el tipo de alimento del ingrediente 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+82                            \{
+83 
+84     \textcolor{keywordflow}{return} tipo;
+85 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a6b70e6c632d6a07bb5536114948f8e3c}\label{classingrediente_a6b70e6c632d6a07bb5536114948f8e3c}} 
+\index{ingrediente@{ingrediente}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool ingrediente\+::operator$<$ (\begin{DoxyParamCaption}\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Operador menor entre dos ingredientes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i1} & ingrediente a comparar \\
+\hline
+{\em i2} & otro ingrediente a comprar \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em devuelve} & true si i1 es menor que i2 sino devuelve false \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 200 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+200                                            \{
+201     \textcolor{keywordtype}{bool} resultado = \textcolor{keyword}{false};
+202   \textcolor{keywordflow}{if}(nombre < i.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}())\{
+203     resultado = \textcolor{keyword}{true};
+204   \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(nombre == i.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}())\{
+205     \textcolor{keywordflow}{if}(tipo <= i.\hyperlink{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}{getTipo}())\{
+206       resultado = \textcolor{keyword}{true};
+207     \}
+208   \}
+209   \textcolor{keywordflow}{return} resultado;
+210 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a13e14c58eee2955d3fa0383fd704d337}\label{classingrediente_a13e14c58eee2955d3fa0383fd704d337}} 
+\index{ingrediente@{ingrediente}!operator==@{operator==}}
+\index{operator==@{operator==}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ingrediente\+::operator== (\begin{DoxyParamCaption}\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Operador de igualdad entre dos ingredientes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i1} & ingrediente a comparar \\
+\hline
+{\em i2} & otro ingrediente a comprar \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em devuelve} & true si son iguales y false si son diferentes en tipo y nombre \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 193 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+193                                             \{
+194     \textcolor{keywordflow}{if}(nombre == i.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}() && tipo == i.\hyperlink{classingrediente_a52fe74f041eba65a8c0a2e006a7686e0}{getTipo}())
+195         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+196     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+197 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_ad58c1fc3e923d2ab95fdacd779c4f4e5}\label{classingrediente_ad58c1fc3e923d2ab95fdacd779c4f4e5}} 
+\index{ingrediente@{ingrediente}!set\+Calorias@{set\+Calorias}}
+\index{set\+Calorias@{set\+Calorias}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Calorias()}{setCalorias()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Calorias (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+Modificador de Calorías. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & calorías (/100g) del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 94 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+94                                   \{
+95 
+96     calorias = c;
+97 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a13928358db435d4a42b348f6ea1ee548}\label{classingrediente_a13928358db435d4a42b348f6ea1ee548}} 
+\index{ingrediente@{ingrediente}!set\+Fibra@{set\+Fibra}}
+\index{set\+Fibra@{set\+Fibra}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Fibra()}{setFibra()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Fibra (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Modificador de Fibra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \% de fibra del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 118 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+118                                  \{
+119 
+120     fibra = f;
+121 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a5b20e7a788dcdb5685c66c7362d65533}\label{classingrediente_a5b20e7a788dcdb5685c66c7362d65533}} 
+\index{ingrediente@{ingrediente}!set\+Grasas@{set\+Grasas}}
+\index{set\+Grasas@{set\+Grasas}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Grasas()}{setGrasas()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Grasas (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})}
+
+
+
+Modificador de Grasas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \% de grasas del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+112                                   \{
+113 
+114     grasas = g;
+115 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_ad335883ec2bbe4e02cc6422c503944e3}\label{classingrediente_ad335883ec2bbe4e02cc6422c503944e3}} 
+\index{ingrediente@{ingrediente}!set\+Hc@{set\+Hc}}
+\index{set\+Hc@{set\+Hc}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Hc()}{setHc()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Hc (\begin{DoxyParamCaption}\item[{float}]{hc }\end{DoxyParamCaption})}
+
+
+
+Modificador de Hc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hc} & \% de hidratos de carbono del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+100                                \{
+101 
+102     Hc = hc;
+103 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_aac5aba3c36aa762c72a8bc38271e4c12}\label{classingrediente_aac5aba3c36aa762c72a8bc38271e4c12}} 
+\index{ingrediente@{ingrediente}!set\+Nombre@{set\+Nombre}}
+\index{set\+Nombre@{set\+Nombre}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Nombre()}{setNombre()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Nombre (\begin{DoxyParamCaption}\item[{string}]{n }\end{DoxyParamCaption})}
+
+
+
+Modificador de Nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nombre del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 88 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+88                                    \{
+89 
+90     nombre = n;
+91 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a5ee4fac5c35f8ff71e7f974d1675a626}\label{classingrediente_a5ee4fac5c35f8ff71e7f974d1675a626}} 
+\index{ingrediente@{ingrediente}!set\+Proteinas@{set\+Proteinas}}
+\index{set\+Proteinas@{set\+Proteinas}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Proteinas()}{setProteinas()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Proteinas (\begin{DoxyParamCaption}\item[{float}]{p }\end{DoxyParamCaption})}
+
+
+
+Modificador de Proteinas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & \% de proteínas del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 106 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+106                                      \{
+107 
+108     proteinas = p;
+109 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_ae51c71ad615844974ee24bb2fe9c7b80}\label{classingrediente_ae51c71ad615844974ee24bb2fe9c7b80}} 
+\index{ingrediente@{ingrediente}!set\+Tipo@{set\+Tipo}}
+\index{set\+Tipo@{set\+Tipo}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{set\+Tipo()}{setTipo()}}
+{\footnotesize\ttfamily void ingrediente\+::set\+Tipo (\begin{DoxyParamCaption}\item[{string}]{t }\end{DoxyParamCaption})}
+
+
+
+Modificador de Tipo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & tipo de alimento del ingrediente a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 124 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+124                                  \{
+125 
+126     tipo = t;
+127 \}
+\end{DoxyCode}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classingrediente_af02aa89e83969f7073a8da7e64ad9b87}\label{classingrediente_af02aa89e83969f7073a8da7e64ad9b87}} 
+\index{ingrediente@{ingrediente}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Salida de un ingrediente a ostream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & stream de salida \\
+\hline
+{\em i} & ingrediente a escribir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se obtiene en {\itshape os} la cadena del ingrediente con su información 
+\end{DoxyPostcond}
+
+
+Definition at line 130 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+130                                                         \{
+131 
+132     \textcolor{keywordflow}{return} os << i.nombre << \textcolor{charliteral}{';'} << i.calorias << \textcolor{charliteral}{';'} << i.Hc << \textcolor{charliteral}{';'} << i.proteinas <<
+133     \textcolor{charliteral}{';'} << i.grasas << \textcolor{charliteral}{';'} << i.fibra << \textcolor{charliteral}{';'} << i.tipo ;
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classingrediente_a76d568aa86c9c0783c4b108b9e0f1023}\label{classingrediente_a76d568aa86c9c0783c4b108b9e0f1023}} 
+\index{ingrediente@{ingrediente}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ingrediente@{ingrediente}}
+\subsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Entrada de un ingrediente desde istream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & stream de entrada \\
+\hline
+{\em r} & ingrediente que recibe el valor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em El} & ingrediente leído en i \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondition}
+La entrada tiene el formato nombre;calorias;Hc;proteinas;grasas;fibra;tipo con {\itshape nombre},{\itshape calorias}, {\itshape Hc}, {\itshape proteinas}, {\itshape grasas}, {\itshape fibra}, {\itshape tipo}, los valores de su información respectiva 
+\end{DoxyPrecond}
+
+
+Definition at line 137 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+137                                                   \{
+138 
+139     \textcolor{keywordtype}{string} linea;
+140     getline(is,linea);
+141     \textcolor{comment}{//nombre}
+142     \textcolor{keywordtype}{string} nom;
+143     \textcolor{keywordtype}{int} pos = linea.find(\textcolor{stringliteral}{";"});
+144     nom = linea.substr(0,pos);
+145     linea = linea.substr(pos+1);
+146   i.\hyperlink{classingrediente_aac5aba3c36aa762c72a8bc38271e4c12}{setNombre}(nom);
+147   \textcolor{comment}{//calorias}
+148   \textcolor{keywordtype}{string} c;
+149   pos = linea.find(\textcolor{stringliteral}{";"});
+150   c=linea.substr(0,pos);
+151   \textcolor{keywordtype}{int} cal = atoi(c.c\_str());
+152   linea = linea.substr(pos+1);
+153   i.\hyperlink{classingrediente_ad58c1fc3e923d2ab95fdacd779c4f4e5}{setCalorias}(cal);
+154   \textcolor{comment}{//hidratos de carbono}
+155   \textcolor{keywordtype}{string} hc;
+156   pos = linea.find(\textcolor{stringliteral}{";"});
+157   hc = linea.substr(0,pos);
+158   \textcolor{keywordtype}{float} hid = atof(hc.c\_str());
+159   linea = linea.substr(pos+1);
+160   i.\hyperlink{classingrediente_ad335883ec2bbe4e02cc6422c503944e3}{setHc}(hid);
+161   \textcolor{comment}{//Proteinas}
+162   \textcolor{keywordtype}{string} p;
+163   pos = linea.find(\textcolor{stringliteral}{";"});
+164   p = linea.substr(0,pos);
+165   \textcolor{keywordtype}{float} prot = atof(p.c\_str());
+166   linea = linea.substr(pos+1);
+167   i.\hyperlink{classingrediente_a5ee4fac5c35f8ff71e7f974d1675a626}{setProteinas}(prot);
+168   \textcolor{comment}{//grasas}
+169   \textcolor{keywordtype}{string} g;
+170   pos = linea.find(\textcolor{stringliteral}{";"});
+171   g = linea.substr(0,pos);
+172   \textcolor{keywordtype}{float} gras = atof(g.c\_str());
+173   linea = linea.substr(pos+1);
+174   i.\hyperlink{classingrediente_a5b20e7a788dcdb5685c66c7362d65533}{setGrasas}(gras);
+175   \textcolor{comment}{//fibra}
+176   \textcolor{keywordtype}{string} f;
+177   pos = linea.find(\textcolor{stringliteral}{";"});
+178   f = linea.substr(0,pos);
+179   \textcolor{keywordtype}{float} fib = atof(f.c\_str());
+180   linea = linea.substr(pos+1);
+181   i.\hyperlink{classingrediente_a13928358db435d4a42b348f6ea1ee548}{setFibra}(fib);
+182   \textcolor{comment}{//tipos}
+183   pos = linea.find(\textcolor{stringliteral}{"\(\backslash\)r"});
+184   linea = linea.substr(0,pos);
+185   i.\hyperlink{classingrediente_ae51c71ad615844974ee24bb2fe9c7b80}{setTipo}(linea);
+186 
+187   \textcolor{keywordflow}{return} is;
+188 
+189 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{ingrediente_8h}{ingrediente.\+h}\item 
+src/\hyperlink{ingrediente_8cpp}{ingrediente.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\hypertarget{ingrediente_8cpp}{}\section{src/ingrediente.cpp File Reference}
+\label{ingrediente_8cpp}\index{src/ingrediente.\+cpp@{src/ingrediente.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}ingrediente.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{ingrediente_8cpp_af02aa89e83969f7073a8da7e64ad9b87}{operator$<$$<$} (ostream \&os, const \hyperlink{classingrediente}{ingrediente} \&i)
+\item 
+istream \& \hyperlink{ingrediente_8cpp_a76d568aa86c9c0783c4b108b9e0f1023}{operator$>$$>$} (istream \&is, \hyperlink{classingrediente}{ingrediente} \&i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ingrediente_8cpp_af02aa89e83969f7073a8da7e64ad9b87}\label{ingrediente_8cpp_af02aa89e83969f7073a8da7e64ad9b87}} 
+\index{ingrediente.\+cpp@{ingrediente.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ingrediente.\+cpp@{ingrediente.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & stream de salida \\
+\hline
+{\em i} & ingrediente a escribir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+Se obtiene en {\itshape os} la cadena del ingrediente con su información 
+\end{DoxyPostcond}
+
+
+Definition at line 130 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+130                                                         \{
+131 
+132     \textcolor{keywordflow}{return} os << i.nombre << \textcolor{charliteral}{';'} << i.calorias << \textcolor{charliteral}{';'} << i.Hc << \textcolor{charliteral}{';'} << i.proteinas <<
+133     \textcolor{charliteral}{';'} << i.grasas << \textcolor{charliteral}{';'} << i.fibra << \textcolor{charliteral}{';'} << i.tipo ;
+134 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{ingrediente_8cpp_a76d568aa86c9c0783c4b108b9e0f1023}\label{ingrediente_8cpp_a76d568aa86c9c0783c4b108b9e0f1023}} 
+\index{ingrediente.\+cpp@{ingrediente.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ingrediente.\+cpp@{ingrediente.\+cpp}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\hyperlink{classingrediente}{ingrediente} \&}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & stream de entrada \\
+\hline
+{\em r} & ingrediente que recibe el valor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em El} & ingrediente leído en i \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondition}
+La entrada tiene el formato nombre;calorias;Hc;proteinas;grasas;fibra;tipo con {\itshape nombre},{\itshape calorias}, {\itshape Hc}, {\itshape proteinas}, {\itshape grasas}, {\itshape fibra}, {\itshape tipo}, los valores de su información respectiva 
+\end{DoxyPrecond}
+
+
+Definition at line 137 of file ingrediente.\+cpp.
+
+
+\begin{DoxyCode}
+137                                                   \{
+138 
+139     \textcolor{keywordtype}{string} linea;
+140     getline(is,linea);
+141     \textcolor{comment}{//nombre}
+142     \textcolor{keywordtype}{string} nom;
+143     \textcolor{keywordtype}{int} pos = linea.find(\textcolor{stringliteral}{";"});
+144     nom = linea.substr(0,pos);
+145     linea = linea.substr(pos+1);
+146   i.\hyperlink{classingrediente_aac5aba3c36aa762c72a8bc38271e4c12}{setNombre}(nom);
+147   \textcolor{comment}{//calorias}
+148   \textcolor{keywordtype}{string} c;
+149   pos = linea.find(\textcolor{stringliteral}{";"});
+150   c=linea.substr(0,pos);
+151   \textcolor{keywordtype}{int} cal = atoi(c.c\_str());
+152   linea = linea.substr(pos+1);
+153   i.\hyperlink{classingrediente_ad58c1fc3e923d2ab95fdacd779c4f4e5}{setCalorias}(cal);
+154   \textcolor{comment}{//hidratos de carbono}
+155   \textcolor{keywordtype}{string} hc;
+156   pos = linea.find(\textcolor{stringliteral}{";"});
+157   hc = linea.substr(0,pos);
+158   \textcolor{keywordtype}{float} hid = atof(hc.c\_str());
+159   linea = linea.substr(pos+1);
+160   i.\hyperlink{classingrediente_ad335883ec2bbe4e02cc6422c503944e3}{setHc}(hid);
+161   \textcolor{comment}{//Proteinas}
+162   \textcolor{keywordtype}{string} p;
+163   pos = linea.find(\textcolor{stringliteral}{";"});
+164   p = linea.substr(0,pos);
+165   \textcolor{keywordtype}{float} prot = atof(p.c\_str());
+166   linea = linea.substr(pos+1);
+167   i.\hyperlink{classingrediente_a5ee4fac5c35f8ff71e7f974d1675a626}{setProteinas}(prot);
+168   \textcolor{comment}{//grasas}
+169   \textcolor{keywordtype}{string} g;
+170   pos = linea.find(\textcolor{stringliteral}{";"});
+171   g = linea.substr(0,pos);
+172   \textcolor{keywordtype}{float} gras = atof(g.c\_str());
+173   linea = linea.substr(pos+1);
+174   i.\hyperlink{classingrediente_a5b20e7a788dcdb5685c66c7362d65533}{setGrasas}(gras);
+175   \textcolor{comment}{//fibra}
+176   \textcolor{keywordtype}{string} f;
+177   pos = linea.find(\textcolor{stringliteral}{";"});
+178   f = linea.substr(0,pos);
+179   \textcolor{keywordtype}{float} fib = atof(f.c\_str());
+180   linea = linea.substr(pos+1);
+181   i.\hyperlink{classingrediente_a13928358db435d4a42b348f6ea1ee548}{setFibra}(fib);
+182   \textcolor{comment}{//tipos}
+183   pos = linea.find(\textcolor{stringliteral}{"\(\backslash\)r"});
+184   linea = linea.substr(0,pos);
+185   i.\hyperlink{classingrediente_ae51c71ad615844974ee24bb2fe9c7b80}{setTipo}(linea);
+186 
+187   \textcolor{keywordflow}{return} is;
+188 
+189 \}
+\end{DoxyCode}

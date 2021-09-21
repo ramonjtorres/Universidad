@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_view_rute"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:id="@+id/post_rt_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postTittleRt"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_text_tittle"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageRoute"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:contentDescription="@string/image_description" />
+
+            <ImageButton
+                android:id="@+id/posRtFav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/pos_rt_fav"
+                android:src="@drawable/post_rt_fav" />
+
+            <Button
+                android:id="@+id/postFollowBtRt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_follow_bt_rt" />
+
+            <TextView
+                android:id="@+id/descriptionTittlePlace"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_text_desc"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/CustomTheme"
+                android:id="@+id/postDescRt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_text_desc"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/post_rt_info_accessibility"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_rt_info_accessibility"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/accessibilityRoute"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/descriptionAccesibilityRt"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/postRtInfoPlaces"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_rt_info_places"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/postListLug"
+                android:layout_width="match_parent"
+                android:layout_height="205dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/previous_places_button"
+                    style="@style/CustomTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/prevButton" />
+
+                <Button
+                    android:id="@+id/next_places_button"
+                    style="@style/CustomTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nextButton" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/postRtInfoRating"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_rt_info_rating"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/postRtRating"
+                style="@style/CustomTheme"
+
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:contentDescription="descriptionRatingRt"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/comments"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comments"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_comments"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent" />
+
+            <TextView
+                android:id="@+id/myComments"
+                style="@style/CustomTheme"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/comments_here"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/writeComments"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:accessibilityLiveRegion="polite"
+                android:hint="@string/write_comment"
+                android:labelFor="@+id/UserName"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/myCommentRoute"
+                    style="@style/CustomTheme"
+                    android:layout_width="match_parent"
+                    android:inputType="textPersonName|textCapSentences|textAutoCorrect" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/sendComment"
+                style="@style/CustomTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_comment" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

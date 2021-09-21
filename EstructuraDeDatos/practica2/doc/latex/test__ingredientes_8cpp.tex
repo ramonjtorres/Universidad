@@ -1,0 +1,151 @@
+\hypertarget{test__ingredientes_8cpp}{}\section{src/test\+\_\+ingredientes.cpp File Reference}
+\label{test__ingredientes_8cpp}\index{src/test\+\_\+ingredientes.\+cpp@{src/test\+\_\+ingredientes.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}ingrediente.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ingredientes.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{test__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}{Muestra\+Parametros} ()
+\item 
+int \hyperlink{test__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{test__ingredientes_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{test\+\_\+ingredientes.\+cpp@{test\+\_\+ingredientes.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+ingredientes.\+cpp@{test\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file test\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+12 \{
+13   \textcolor{keywordflow}{if} (argc!=2)\{
+14       \hyperlink{test__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}{MuestraParametros}();
+15       \textcolor{keywordflow}{return} 0;
+16  \}
+17 
+18  \textcolor{comment}{/******************************************************************************************/}
+19  \textcolor{comment}{//SECTION 1: Test sobre la lectura de un ingrediente}
+20  \textcolor{comment}{//Ingrediente debe tener operadores de consulta y de modificacion por cada parametros}
+21  \textcolor{comment}{//ademas de sobrecarga de lectura y escritura}
+22 
+23  \textcolor{keywordtype}{string} nf =argv[1];
+24  ifstream f(nf);
+25  \textcolor{keywordflow}{if} (!f)\{
+26     cout<<\textcolor{stringliteral}{"No puedo abrir "}<<nf<<endl;
+27     \textcolor{keywordflow}{return} 0;
+28  \}
+29  \textcolor{comment}{//Quitamos la primera linea}
+30  \textcolor{keywordtype}{string} linea;
+31  getline(f,linea);
+32 
+33  \hyperlink{classingrediente}{ingrediente} i;
+34  f>>i;
+35  cout<<\textcolor{stringliteral}{"Leido ingrediente:"}<<endl;
+36  cout<<\textcolor{stringliteral}{"Nombre "} <<i.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}()<<endl;
+37  cout<<\textcolor{stringliteral}{"Calorias "}<<i.getCalorias()<<endl;
+38  cout<<\textcolor{stringliteral}{"Hc "}<<i.getHc()<<endl;
+39  cout<<\textcolor{stringliteral}{"Proteinas "}<<i.getProteinas()<<endl;
+40  cout<<\textcolor{stringliteral}{"Grasas "}<<i.getGrasas()<<endl;
+41  cout<<\textcolor{stringliteral}{"Fibra "}<<i.getFibra()<<endl;
+42  cout<<\textcolor{stringliteral}{"Tipo "}<<i.getTipo()<<endl;
+43  cout<<endl<<\textcolor{stringliteral}{"Ahora probamos la sobrecarga de salida:\(\backslash\)t"}<<i<<endl;
+44 
+45  cout<<\textcolor{stringliteral}{"\(\backslash\)n Pulsa una tecla para continuar...."}<<endl;
+46  cin.get();
+47 
+48 
+49  \textcolor{comment}{//SECTION 2: Test sobre el objeto Ingredientes. En primer lugar comprobamos que la sobrecarga de
+       entrada/salida}
+50  \textcolor{comment}{//esta bien. Y por lo tanto la operación de insertar}
+51  \textcolor{comment}{//Ponemos el puntero del fichero al principio}
+52  f.seekg(0);
+53  \hyperlink{classingredientes}{ingredientes} all\_ingre;
+54  cout<<\textcolor{stringliteral}{"Lectura de todos los ingredientes"}<<endl;
+55  f>>all\_ingre;
+56 
+57  \textcolor{comment}{//Comprobamos que hemos hecho bien la lectura}
+58  cout<<\textcolor{stringliteral}{"Los ingredientes ordenados por nombre..."}<<endl<<endl;
+59  cout<<all\_ingre<<endl;
+60  cout<<\textcolor{stringliteral}{"Pulse una tecla para continuar..."}<<endl<<endl;
+61  cin.\hyperlink{classingredientes_a920e0fbbf533a8ba934cfc485b2e44c0}{get}();
+62     
+63  \textcolor{comment}{//Section 3: Sobre ingredientes comprobamos  que la indexacion por tipo funciona}
+64 
+65   cout<<\textcolor{stringliteral}{"Imprimos por tipo "}<<endl;
+66   all\_ingre.ImprimirPorTipo();
+67 
+68   cout<<endl<<\textcolor{stringliteral}{"Pulse una tecla para continuar..."}<<endl<<endl;
+69   cin.get();
+70 
+71 
+72  \textcolor{comment}{//SECTION 4: Sobre ingredientes comprobamos consultar por nombre, size y borrar}
+73   cout<<endl<<endl;
+74   cout<<\textcolor{stringliteral}{"El numero de ingredientes son "}<<all\_ingre.size()<<endl;
+75 
+76   cout<<\textcolor{stringliteral}{"Dime un nombre de ingrediente:"};
+77   \textcolor{keywordtype}{string} n;
+78   getline(cin,n);
+79   \hyperlink{classingrediente}{ingrediente} ing=all\_ingre.get(n);
+80   \textcolor{keywordflow}{if} (ing.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}()!=\textcolor{stringliteral}{"Undefined"})\{
+81     cout<<\textcolor{stringliteral}{"Información del ingrediente "}<<ing<<endl;
+82     cout<<\textcolor{stringliteral}{"Pulse una tecla para continuar...."}<<endl;
+83     cin.get();
+84 
+85     \textcolor{comment}{//borra por nombre del ingrediente}
+86     all\_ingre.borrar(n);
+87     cout<<\textcolor{stringliteral}{"Tras el borrado de "}<<ing.\hyperlink{classingrediente_a1bb43a7c4f04f6ef9b85cb599248fb8e}{getNombre}()<<\textcolor{stringliteral}{" los ingredientes son:"}<<endl<<all\_ingre;
+88     cout<<\textcolor{stringliteral}{"Numero de ingredientes tras el borrado son "}<<all\_ingre.size()<<endl;
+89     cout<<\textcolor{stringliteral}{"Pulse una tecla para continuar ...."}<<endl;
+90     cin.get();
+91     cout<<\textcolor{stringliteral}{"Ahora los vemos ordenados por tipo"}<<endl;
+92     all\_ingre.ImprimirPorTipo();
+93    \}
+94    \textcolor{keywordflow}{else}\{
+95        cout<<\textcolor{stringliteral}{"El ingrediente "}<<n<<\textcolor{stringliteral}{" no aparece "}<<endl;
+96 
+97    \}
+98   cout<<endl<<\textcolor{stringliteral}{"Pulse una tecla para continuar..."}<<endl<<endl;
+99   cin.get();
+100 
+101     
+102   \textcolor{comment}{//SECTION 5: Obtiene los tipos diferentes y los  ingredientes de un tipo concreto}
+103    \hyperlink{classVD}{VD<string>} tipos=all\_ingre.getTipos();
+104    cout<<\textcolor{stringliteral}{"Los tipos de alimentos son:"}<<endl;
+105    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;i<tipos.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); ++i)\{
+106       cout<<tipos[i]<<endl;
+107    \}
+108    cout<<\textcolor{stringliteral}{"Pulse una tecla para continuar "}<<endl;
+109    cin.get();
+110 
+111    \textcolor{keywordtype}{string} tipo=\textcolor{stringliteral}{"Molusco"};
+112    \hyperlink{classingredientes}{ingredientes} ingre\_tipo=all\_ingre.\hyperlink{classingredientes_a160ecb07facb16cbe7369ea797c67549}{getIngredienteTipo}(tipo);
+113    cout<<\textcolor{stringliteral}{"Los ingredientes de tipo "}<<tipo<<\textcolor{stringliteral}{" son: "}<<endl<<ingre\_tipo<<endl;
+114 
+115 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{test__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}\label{test__ingredientes_8cpp_a1d396fb930f612455418e084fb045b92}} 
+\index{test\+\_\+ingredientes.\+cpp@{test\+\_\+ingredientes.\+cpp}!Muestra\+Parametros@{Muestra\+Parametros}}
+\index{Muestra\+Parametros@{Muestra\+Parametros}!test\+\_\+ingredientes.\+cpp@{test\+\_\+ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{Muestra\+Parametros()}{MuestraParametros()}}
+{\footnotesize\ttfamily void Muestra\+Parametros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file test\+\_\+ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+6                         \{
+7 
+8     cout<<\textcolor{stringliteral}{"1.- Dime el nombre del fichero con los ingredientes"}<<endl;
+9 \}
+\end{DoxyCode}

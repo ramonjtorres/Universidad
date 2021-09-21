@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/look_profile">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                style="@style/CustomTheme"
+                android:clickable="true"
+                android:focusable="true"
+                android:icon="@drawable/ic_person_white_24dp"
+                android:title="@string/look_profile" />
+            <item
+                android:id="@+id/nav_logout"
+                style="@style/CustomTheme"
+                android:clickable="true"
+                android:focusable="true"
+                android:icon="@drawable/ic_close_black_24dp"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+    <item android:title="@string/accesibility_options">
+        <menu>
+            <item
+                android:id="@+id/nav_accesibility"
+                style="@style/CustomTheme"
+                android:clickable="true"
+                android:focusable="true"
+                android:icon="@drawable/ic_accessible_black_24dp"
+                android:title="@string/accesibility_options" />
+        </menu>
+    </item>
+</menu>

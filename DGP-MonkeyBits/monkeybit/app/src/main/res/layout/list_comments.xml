@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list_comments"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/author"
+        style="@style/CustomTheme"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/imagePlace"
+        android:text="Author"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/comment"
+        style="@style/CustomTheme"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toStartOf="@+id/banButton"
+        android:layout_toEndOf="@+id/author"
+        android:text="Comment"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/CustomTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/author"
+        android:text="Date"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/CustomTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/date"
+        android:text="Time"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/banButton"
+        style="@style/CustomTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/report"
+        app:srcCompat="@android:drawable/ic_notification_clear_all" />
+
+
+</RelativeLayout>

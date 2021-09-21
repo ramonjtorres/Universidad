@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "81923790114",
+    "firebase_url": "https://routability-d9426.firebaseio.com",
+    "project_id": "routability-d9426",
+    "storage_bucket": "routability-d9426.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81923790114:android:f2f78b1d02c2d750",
+        "android_client_info": {
+          "package_name": "com.monkeybit.routability"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "81923790114-6lcudljfvuq1iqm3143dvhini10hfhp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.monkeybit.routability",
+            "certificate_hash": "b5d50251be86aedfff042dfd7a12486c5549dad2"
+          }
+        },
+        {
+          "client_id": "81923790114-prn0qtn4l29q2ujffhe78sgdqgk3opui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANdgo8EH5d63pV-3HmGy0SYpKEM4LU8_s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "81923790114-prn0qtn4l29q2ujffhe78sgdqgk3opui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

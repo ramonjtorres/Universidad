@@ -1,0 +1,105 @@
+\hypertarget{ingredientes_8cpp}{}\section{src/ingredientes.cpp File Reference}
+\label{ingredientes_8cpp}\index{src/ingredientes.\+cpp@{src/ingredientes.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}ingredientes.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{ingredientes_8cpp_ae557f016f908fddaeda9296f7eccbf5d}{Esta} (string Tipo, \hyperlink{classVD}{VD}$<$ string $>$vd)
+\item 
+istream \& \hyperlink{ingredientes_8cpp_a1ab0c9c6bff343a083f9cf9296b31438}{operator$>$$>$} (istream \&is, \hyperlink{classingredientes}{ingredientes} \&i)
+\item 
+ostream \& \hyperlink{ingredientes_8cpp_a9516ae2a429fa3af5b8d59b98a285c86}{operator$<$$<$} (ostream \&os, \hyperlink{classingredientes}{ingredientes} \&i)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ingredientes_8cpp_ae557f016f908fddaeda9296f7eccbf5d}\label{ingredientes_8cpp_ae557f016f908fddaeda9296f7eccbf5d}} 
+\index{ingredientes.\+cpp@{ingredientes.\+cpp}!Esta@{Esta}}
+\index{Esta@{Esta}!ingredientes.\+cpp@{ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{Esta()}{Esta()}}
+{\footnotesize\ttfamily bool Esta (\begin{DoxyParamCaption}\item[{string}]{Tipo,  }\item[{\hyperlink{classVD}{VD}$<$ string $>$}]{vd }\end{DoxyParamCaption})}
+
+
+
+Definition at line 134 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+134                                     \{
+135 
+136     \textcolor{keywordtype}{bool} resultado = \textcolor{keyword}{false};
+137 
+138     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < vd.\hyperlink{classVD_a411ad026db1c8e0617d9031f1f1017a5}{size}(); i++)\{
+139 
+140         \textcolor{keywordflow}{if}(vd[i] == Tipo)\{
+141 
+142             resultado = \textcolor{keyword}{true};
+143         \}
+144     \}
+145 
+146     \textcolor{keywordflow}{return} resultado;
+147 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{ingredientes_8cpp_a9516ae2a429fa3af5b8d59b98a285c86}\label{ingredientes_8cpp_a9516ae2a429fa3af5b8d59b98a285c86}} 
+\index{ingredientes.\+cpp@{ingredientes.\+cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!ingredientes.\+cpp@{ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\hyperlink{classingredientes}{ingredientes} \&}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & stream de salida \\
+\hline
+{\em i} & ingredientes que tienen el valor \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 195 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+195                                                   \{
+196     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j< i.\hyperlink{classingredientes_a642511344976e22479ae78e4ee2917f9}{size}(); j++)
+197         os <<i[j] <<endl;
+198     \textcolor{keywordflow}{return} os;
+199 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{ingredientes_8cpp_a1ab0c9c6bff343a083f9cf9296b31438}\label{ingredientes_8cpp_a1ab0c9c6bff343a083f9cf9296b31438}} 
+\index{ingredientes.\+cpp@{ingredientes.\+cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!ingredientes.\+cpp@{ingredientes.\+cpp}}
+\subsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\hyperlink{classingredientes}{ingredientes} \&}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & stream de entrada \\
+\hline
+{\em i} & ingredientes que reciben el valor \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Los} & ingredientes leidos en i \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyPrecond}{Precondition}
+La entrada tiene un ingrediente en cada linea 
+\end{DoxyPrecond}
+
+
+Definition at line 184 of file ingredientes.\+cpp.
+
+
+\begin{DoxyCode}
+184                                                    \{
+185     \textcolor{keywordtype}{string} linea;
+186     getline(is,linea);
+187     \hyperlink{classingrediente}{ingrediente} ing;
+188     \textcolor{keywordflow}{while}(is >> ing)\{
+189         i.\hyperlink{classingredientes_abbf5ea48179d79c13e5abd6c09393ada}{Insertar}(ing);
+190     \}
+191     \textcolor{keywordflow}{return} is;
+192 \}
+\end{DoxyCode}

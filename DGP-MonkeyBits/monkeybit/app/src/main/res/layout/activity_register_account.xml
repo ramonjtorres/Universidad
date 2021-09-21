@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterAccountActivity">
+
+    <LinearLayout
+        style="@style/CustomTheme"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/eMailAut_text_input_layout"
+            android:layout_width="match_parent"
+            style="@style/CustomTheme"
+            android:labelFor="@+id/eMailAut"
+            android:accessibilityLiveRegion="polite"
+            android:hint="@string/email"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/eMailAut"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:inputType="textEmailAddress|textCapSentences|textAutoCorrect"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passAut_text_input_layout"
+            android:layout_width="match_parent"
+            style="@style/CustomTheme"
+            android:labelFor="@+id/passAut"
+            android:accessibilityLiveRegion="polite"
+            android:hint="@string/password"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passAut"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:inputType="textPassword|textCapSentences|textAutoCorrect"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passAutRepeat_text_input_layout"
+            android:layout_width="match_parent"
+            style="@style/CustomTheme"
+            android:labelFor="@+id/passAutRepeat"
+            android:accessibilityLiveRegion="polite"
+            android:hint="@string/repeat_password"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passAutRepeat"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:inputType="textPassword|textCapSentences|textAutoCorrect"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/UserName_text_input_layout"
+            android:layout_width="match_parent"
+            style="@style/CustomTheme"
+            android:labelFor="@+id/UserName"
+            android:accessibilityLiveRegion="polite"
+            android:hint="@string/user_name"
+            app:errorEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/UserName"
+                style="@style/CustomTheme"
+                android:layout_width="match_parent"
+                android:inputType="textPersonName|textCapSentences|textAutoCorrect"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/CreateAccount"
+            style="@style/CustomTheme"
+            android:layout_width="match_parent"
+            android:text="@string/create_account"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
